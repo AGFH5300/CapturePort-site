@@ -1,58 +1,65 @@
 :root {
-  --brand-blue: #05425e;
-  --brand-yellow: #f7ad1a;
+  --brand-blue: #0D2C6B;
+  --brand-yellow: #FFC107;
   --bg: #f6f9fb;
   --text: #12212b;
   --muted: #4a5a67;
   --card: #ffffff;
+  --border: #dde6ec;
 }
 * { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.55;
-}
+body { margin: 0; font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 a { color: var(--brand-blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .container { width: min(1080px, 92vw); margin: 0 auto; }
-.site-header { background: #fff; border-bottom: 1px solid #dde6ec; }
+.site-header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: .45rem 0; gap: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .45rem; color: var(--brand-blue); font-weight: 800; font-size: clamp(1.2rem, 1.5vw, 1.5rem); line-height: 1; }
 .brand-icon { width: auto; height: 52px; flex: none; display: block; }
 .brand-wordmark { letter-spacing: -0.01em; }
 .nav-links { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; flex-wrap: wrap; align-items: center; }
-.nav-cta { border: 1px solid #c8d8e2; border-radius: 999px; padding: .35rem .75rem; }
-.nav-cta:hover { background: #f2f7fa; text-decoration: none; }
+.nav-links a { font-weight: 600; font-size: .95rem; }
 .hero { padding: 4rem 0 2.2rem; }
 .eyebrow { text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-size: .82rem; font-weight: 700; margin: 0 0 .6rem; }
 h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: 0 0 .8rem; color: var(--brand-blue); }
+h2, h3 { color: var(--brand-blue); line-height: 1.25; }
 .lead { font-size: 1.08rem; max-width: 760px; margin: 0 0 1.5rem; color: #243743; }
 .cta-row { display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; }
-.btn { display: inline-block; padding: .7rem 1rem; border-radius: .55rem; font-weight: 600; }
+.btn { display: inline-block; padding: .7rem 1rem; border-radius: .55rem; font-weight: 700; }
 .btn-primary { background: var(--brand-blue); color: #fff; }
-.btn-primary:hover { background: #04344a; text-decoration: none; }
+.btn-primary:hover { background: #082252; text-decoration: none; }
 .btn-yellow { background: var(--brand-yellow); color: #10212c; }
-.btn-yellow:hover { background: #e49d13; text-decoration: none; }
 .btn-secondary { background: #fff; border: 1px solid #c8d8e2; color: var(--brand-blue); }
-.btn-secondary:hover { text-decoration: none; background: #f2f7fa; }
-.download-note { color: var(--muted); font-size: .92rem; margin-top: .75rem; }
-.download-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .9rem; margin-top: 1rem; }
-.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .9rem; padding: 1.2rem 0 2rem; }
-.card, .section-block, .trust-note, .content-card { background: var(--card); border: 1px solid #dde6ec; border-radius: .8rem; padding: 1rem; }
-.card h2 { margin-top: 0; font-size: 1.1rem; color: var(--brand-blue); }
+.btn-secondary:hover, .btn-yellow:hover { text-decoration: none; filter: brightness(.98); }
+.download-note, .meta, .small-note { color: var(--muted); font-size: .95rem; }
+.download-options, .features, .link-grid, .use-case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .9rem; }
+.features { padding: 1.2rem 0 2rem; }
+.card, .section-block, .trust-note, .content-card, .link-card { background: var(--card); border: 1px solid var(--border); border-radius: .9rem; padding: 1rem; }
+.card h2 { margin-top: 0; font-size: 1.1rem; }
 .section-block { margin-bottom: 1.2rem; }
-.trust-note { border-left: 4px solid #f2cf7a; background: #fffdf7; margin-bottom: 2.5rem; }
-.site-footer { background: #fff; border-top: 1px solid #dde6ec; padding: 1rem 0; }
+.trust-note { border-left: 4px solid var(--brand-yellow); background: #fffdf7; margin-bottom: 2.5rem; }
+.site-footer { background: #fff; border-top: 1px solid var(--border); padding: 1rem 0; }
 .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+.footer-copy { margin: .5rem auto 0; color: var(--muted); font-size: .88rem; }
 .page-main { padding: 2rem 0 3rem; }
 .page-main h1 { font-size: clamp(1.7rem, 4.8vw, 2.4rem); margin-top: 0; }
-.meta { color: var(--muted); font-size: .92rem; }
 ul { padding-left: 1.1rem; }
+.link-grid, .use-case-grid { margin: 1rem 0 2rem; }
+.link-card { display: block; }
+.link-card strong { color: var(--brand-blue); display: block; margin-bottom: .3rem; }
+.link-card span { color: var(--muted); display: block; font-size: .95rem; }
+.faq { margin-top: 1.5rem; }
+.faq details { background: #fff; border: 1px solid var(--border); border-radius: .7rem; padding: .9rem 1rem; margin-bottom: .7rem; }
+.faq summary { cursor: pointer; font-weight: 700; color: var(--brand-blue); }
+.badge-list { display: flex; gap: .5rem; flex-wrap: wrap; margin: 1rem 0; }
+.badge { background: #eef5f8; color: var(--brand-blue); border: 1px solid #d6e6ee; border-radius: 999px; padding: .3rem .7rem; font-size: .9rem; font-weight: 700; }
+.seo-intro { font-size: 1.05rem; color: #243743; }
+.callout { background: #F2F4F7; border-radius: .9rem; padding: 1rem; border: 1px solid #e0e6ee; }
+.internal-links { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.internal-links a { display: inline-block; margin: .2rem .6rem .2rem 0; font-weight: 700; }
 @media (max-width: 700px) {
   .nav-wrap { flex-direction: column; align-items: flex-start; padding: .5rem 0; }
   .brand { font-size: 1.25rem; gap: .4rem; }
   .brand-icon { height: 42px; }
+  .nav-links { gap: .7rem; }
 }
-.footer-copy { margin: .5rem auto 0; color: var(--muted); font-size: .88rem; }

@@ -1,0 +1,36 @@
+# CapturePort
+
+CapturePort is an offline-first AI-assisted field reporting application designed for engineers, inspectors, surveyors, technicians, marine service teams, and field operations.
+
+Website: https://captureport.app
+Support: support@captureport.app
+
+Core capabilities:
+- Offline field reporting
+- Inspection reporting
+- Photo-based reporting
+- AI-assisted report drafting
+- Voice notes and observations
+- Mobile-first workflows
+- Marine and industrial reporting workflows
+
+CapturePort helps users capture field evidence, organize observations, and generate structured professional report drafts.
+
+Target users:
+- Marine engineers
+- Service engineers
+- Inspectors
+- Surveyors
+- Repair teams
+- Offshore teams
+- Field technicians
+- Industrial service companies
+
+Key pages:
+- https://captureport.app/
+- https://captureport.app/field-reporting-app/
+- https://captureport.app/offline-reporting-app/
+- https://captureport.app/inspection-report-app/
+- https://captureport.app/marine-reporting-app/
+- https://captureport.app/photo-report-app/
+- https://captureport.app/ai-report-generator/
