@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://captureport.app/</loc></url>
-  <url><loc>https://captureport.app/download/</loc></url>
-  <url><loc>https://captureport.app/privacy/</loc></url>
-  <url><loc>https://captureport.app/terms/</loc></url>
-  <url><loc>https://captureport.app/contact/</loc></url>
-  <url><loc>https://captureport.app/delete-account/</loc></url>
-  <url><loc>https://captureport.app/pilot/</loc></url>
+<url><loc>https://captureport.app/</loc></url>
+<url><loc>https://captureport.app/download/</loc></url>
+<url><loc>https://captureport.app/privacy/</loc></url>
+<url><loc>https://captureport.app/terms/</loc></url>
+<url><loc>https://captureport.app/contact/</loc></url>
+<url><loc>https://captureport.app/pilot/</loc></url>
+<url><loc>https://captureport.app/field-reporting-app/</loc></url>
+<url><loc>https://captureport.app/offline-reporting-app/</loc></url>
+<url><loc>https://captureport.app/inspection-report-app/</loc></url>
+<url><loc>https://captureport.app/marine-reporting-app/</loc></url>
+<url><loc>https://captureport.app/photo-report-app/</loc></url>
+<url><loc>https://captureport.app/ai-report-generator/</loc></url>
 </urlset>
