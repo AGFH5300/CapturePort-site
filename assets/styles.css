@@ -21,17 +21,24 @@ a:hover { text-decoration: underline; }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; gap: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1.1rem; color: var(--brand-blue); }
 .brand-icon { width: 34px; height: 34px; flex: none; }
-.nav-links { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; flex-wrap: wrap; }
+.brand-logo { width: 170px; height: auto; display: block; }
+.nav-links { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; flex-wrap: wrap; align-items: center; }
+.nav-cta { border: 1px solid #c8d8e2; border-radius: 999px; padding: .35rem .75rem; }
+.nav-cta:hover { background: #f2f7fa; text-decoration: none; }
 .hero { padding: 4rem 0 2.2rem; }
 .eyebrow { text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-size: .82rem; font-weight: 700; margin: 0 0 .6rem; }
 h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: 0 0 .8rem; color: var(--brand-blue); }
 .lead { font-size: 1.08rem; max-width: 760px; margin: 0 0 1.5rem; color: #243743; }
-.cta-row { display: flex; gap: .8rem; flex-wrap: wrap; }
+.cta-row { display: flex; gap: .8rem; flex-wrap: wrap; align-items: center; }
 .btn { display: inline-block; padding: .7rem 1rem; border-radius: .55rem; font-weight: 600; }
 .btn-primary { background: var(--brand-blue); color: #fff; }
 .btn-primary:hover { background: #04344a; text-decoration: none; }
+.btn-yellow { background: var(--brand-yellow); color: #10212c; }
+.btn-yellow:hover { background: #e49d13; text-decoration: none; }
 .btn-secondary { background: #fff; border: 1px solid #c8d8e2; color: var(--brand-blue); }
 .btn-secondary:hover { text-decoration: none; background: #f2f7fa; }
+.download-note { color: var(--muted); font-size: .92rem; margin-top: .75rem; }
+.download-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .9rem; margin-top: 1rem; }
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .9rem; padding: 1.2rem 0 2rem; }
 .card, .section-block, .trust-note, .content-card { background: var(--card); border: 1px solid #dde6ec; border-radius: .8rem; padding: 1rem; }
 .card h2 { margin-top: 0; font-size: 1.1rem; color: var(--brand-blue); }
@@ -45,5 +52,6 @@ h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: 0 0 .8rem; co
 ul { padding-left: 1.1rem; }
 @media (max-width: 700px) {
   .nav-wrap { flex-direction: column; align-items: flex-start; }
+  .brand-logo { width: 150px; }
 }
 .footer-copy { margin: .5rem auto 0; color: var(--muted); font-size: .88rem; }
