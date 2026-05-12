@@ -1,0 +1,21 @@
+{
+  "name": "CapturePort",
+  "short_name": "CapturePort",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f9fb",
+  "theme_color": "#05425e",
+  "icons": [
+    {
+      "src": "/assets/captureport-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/captureport-adaptive.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
