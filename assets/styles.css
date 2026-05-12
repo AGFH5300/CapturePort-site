@@ -36,7 +36,7 @@ h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: 0 0 .8rem; co
 .card, .section-block, .trust-note, .content-card { background: var(--card); border: 1px solid #dde6ec; border-radius: .8rem; padding: 1rem; }
 .card h2 { margin-top: 0; font-size: 1.1rem; color: var(--brand-blue); }
 .section-block { margin-bottom: 1.2rem; }
-.trust-note { border-left: 6px solid var(--brand-yellow); margin-bottom: 2.5rem; }
+.trust-note { border-left: 4px solid #f2cf7a; background: #fffdf7; margin-bottom: 2.5rem; }
 .site-footer { background: #fff; border-top: 1px solid #dde6ec; padding: 1rem 0; }
 .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 .page-main { padding: 2rem 0 3rem; }
