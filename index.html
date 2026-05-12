@@ -3,16 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CapturePort | Capture. Report. Done.</title>
-  <meta name="description" content="CapturePort helps field teams capture photos, notes, voice inputs, and prepare clean professional report drafts.">
-  <meta property="og:title" content="CapturePort | Capture. Report. Done.">
-  <meta property="og:description" content="Mobile-first field reporting for marine service engineers, surveyors, inspectors, and repair teams.">
+  <title>CapturePort | Offline Field Reporting App for Engineers and Inspectors</title>
+  <meta name="description" content="CapturePort is an offline-first AI-assisted field reporting app for engineers, inspectors, surveyors, marine service teams, and technicians.">
+  <meta name="keywords" content="field reporting app, offline reporting app, inspection reporting app, marine reporting app, photo report app, AI report generator">
+  <link rel="canonical" href="https://captureport.app/">
+  <meta property="og:title" content="CapturePort | Offline Field Reporting App">
+  <meta property="og:description" content="Capture photos, notes, voice inputs, and prepare professional AI-assisted report drafts in the field.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://captureport.app/">
+  <meta property="og:image" content="https://captureport.app/assets/captureport-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CapturePort | Offline Field Reporting App">
+  <meta name="twitter:description" content="AI-assisted field reporting for engineers, inspectors, surveyors, marine service teams, and technicians.">
+  <meta name="twitter:image" content="https://captureport.app/assets/captureport-logo.png">
   <link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/captureport-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/assets/captureport-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/assets/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://captureport.app/#organization",
+        "name": "CapturePort",
+        "url": "https://captureport.app/",
+        "logo": "https://captureport.app/assets/captureport-logo.png",
+        "email": "support@captureport.app"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://captureport.app/#software",
+        "name": "CapturePort",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "Offline-first AI-assisted field reporting app for engineers, inspectors, surveyors, marine service teams, and technicians.",
+        "url": "https://captureport.app/",
+        "publisher": { "@id": "https://captureport.app/#organization" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://captureport.app/#website",
+        "name": "CapturePort",
+        "url": "https://captureport.app/",
+        "publisher": { "@id": "https://captureport.app/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -23,11 +62,11 @@
       </a>
       <nav aria-label="Main navigation">
         <ul class="nav-links">
+          <li><a href="/field-reporting-app/">Field Reporting</a></li>
+          <li><a href="/offline-reporting-app/">Offline</a></li>
+          <li><a href="/marine-reporting-app/">Marine</a></li>
           <li><a href="/download">Download</a></li>
-          <li><a href="/privacy">Privacy</a></li>
-          <li><a href="/terms">Terms</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="/pilot">Pilot</a></li>
         </ul>
       </nav>
     </div>
@@ -35,26 +74,33 @@
 
   <main>
     <section class="hero container">
-      <p class="eyebrow">Mobile-first field reporting</p>
-      <h1>Capture. Report. Done.</h1>
-      <p class="lead">CapturePort helps field teams capture photos, notes, voice inputs, and prepare clean professional report drafts.</p>
+      <p class="eyebrow">Offline-first AI-assisted field reporting</p>
+      <h1>Capture. Communicate. Complete.</h1>
+      <p class="lead">CapturePort helps engineers, inspectors, surveyors, marine service teams, and technicians capture photos, notes, voice inputs, and prepare clean professional report drafts.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="/download">Download App</a>
         <a class="btn btn-secondary" href="/pilot">Join Pilot</a>
-        <a class="btn btn-secondary" href="/contact">Contact Us</a>
+        <a class="btn btn-secondary" href="/field-reporting-app/">Explore Use Cases</a>
       </div>
     </section>
 
     <section class="container features" aria-label="CapturePort features">
-      <article class="card"><h2>Capture field evidence</h2><p>Collect photos and related observations from jobs in real working conditions.</p></article>
-      <article class="card"><h2>Add notes and voice input</h2><p>Record details quickly with structured notes and voice-assisted input.</p></article>
-      <article class="card"><h2>Prepare report drafts</h2><p>Use AI-assisted drafting to turn raw field inputs into clear report structure.</p></article>
-      <article class="card"><h2>Review before sharing</h2><p>Validate every section before distributing any report externally.</p></article>
+      <article class="card"><h2>Capture field evidence</h2><p>Collect photos, observations, and job details from real field conditions, including vessel and industrial environments.</p></article>
+      <article class="card"><h2>Add notes and voice input</h2><p>Record technical details quickly with structured notes and voice-assisted reporting workflows.</p></article>
+      <article class="card"><h2>Prepare AI-assisted drafts</h2><p>Turn raw field inputs into cleaner report drafts while keeping the user in control of final review.</p></article>
+      <article class="card"><h2>Review before sharing</h2><p>Validate every report section before sending anything to clients, class, managers, or external stakeholders.</p></article>
     </section>
 
     <section class="container section-block">
-      <h2>Built mobile-first, with future desktop workspace support</h2>
-      <p>CapturePort is being built mobile-first. A future secure desktop/web workspace is planned for reviewing reports and managing jobs, but it is not available at this stage.</p>
+      <h2>Built for field teams, not office-only reporting</h2>
+      <p>CapturePort is an offline-first mobile reporting app direction for service engineers, inspectors, surveyors, repair teams, offshore teams, field supervisors, and technical service companies.</p>
+      <div class="internal-links">
+        <a href="/offline-reporting-app/">Offline Reporting App</a>
+        <a href="/inspection-report-app/">Inspection Report App</a>
+        <a href="/marine-reporting-app/">Marine Reporting App</a>
+        <a href="/photo-report-app/">Photo Report App</a>
+        <a href="/ai-report-generator/">AI Report Generator</a>
+      </div>
     </section>
 
     <section class="container trust-note" aria-label="Important disclaimer">
@@ -62,6 +108,6 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-links"><a href="/download">Download</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a><a href="/pilot">Pilot</a></div><p class="container footer-copy">© 2026 CapturePort</p></footer>
+  <footer class="site-footer"><div class="container footer-links"><a href="/download">Download</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a><a href="/pilot">Pilot</a><a href="/llms.txt">LLM Info</a></div><p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p></footer>
 </body>
 </html>
