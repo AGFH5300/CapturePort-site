@@ -1,66 +1,209 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy | CapturePort</title>
-  <meta name="description" content="CapturePort privacy policy for pilot and early access users.">
-  <meta property="og:title" content="Privacy Policy | CapturePort">
-  <meta property="og:description" content="How CapturePort handles data during pilot and early access.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://captureport.app/privacy/">
-  <link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | CapturePort</title>
+<meta name="description" content="CapturePort privacy policy. Learn how we handle your data — all reports, photos, and notes are stored locally on your device only.">
+<link rel="canonical" href="https://captureport.app/privacy">
+<meta property="og:title" content="Privacy Policy | CapturePort">
+<meta property="og:description" content="CapturePort is offline-first. Your data stays on your device. Read our full privacy policy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://captureport.app/privacy">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/captureport-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .legal-hero { padding: 3rem 0 2rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 2.5rem; }
+  .legal-tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #0D2C6B; background: #e8edf7; border-radius: 20px; padding: 4px 14px; margin-bottom: 1rem; }
+  .legal-hero h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; color: #0D2C6B; margin-bottom: 0.5rem; }
+  .legal-meta { font-size: 0.85rem; color: #718096; }
+  .legal-body { max-width: 720px; }
+  .summary-box { background: #e8edf7; border-left: 3px solid #0D2C6B; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin-bottom: 2.5rem; }
+  .summary-box p { margin: 0; color: #0D2C6B; font-size: 0.93rem; line-height: 1.6; }
+  .toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+  .toc-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #718096; margin: 0 0 0.75rem; }
+  .toc ol { padding-left: 1.25rem; margin: 0; }
+  .toc li { margin-bottom: 0.3rem; }
+  .toc a { font-size: 0.875rem; color: #0D2C6B; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .policy-section { margin-bottom: 2.5rem; }
+  .policy-section h2 { font-size: 1.1rem; font-weight: 700; color: #0D2C6B; margin-bottom: 0.85rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e8edf7; display: flex; align-items: center; gap: 10px; }
+  .sec-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #0D2C6B; color: white; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; }
+  .policy-section p { color: #4a5568; font-size: 0.93rem; margin-bottom: 0.8rem; line-height: 1.7; }
+  .policy-section ul { padding-left: 1.5rem; color: #4a5568; margin-bottom: 0.8rem; }
+  .policy-section li { font-size: 0.93rem; margin-bottom: 0.35rem; line-height: 1.6; }
+  .policy-section strong { color: #1a1a2e; font-weight: 600; }
+  .warn-box { background: #fff8ed; border-left: 3px solid #d97706; border-radius: 0 8px 8px 0; padding: 0.9rem 1.1rem; margin: 1rem 0; }
+  .warn-box p { margin: 0; color: #92400e; font-size: 0.9rem; }
+  .contact-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem; margin-top: 3rem; text-align: center; }
+  .contact-card h3 { font-size: 1rem; font-weight: 700; color: #0D2C6B; margin-bottom: 0.4rem; }
+  .contact-card p { font-size: 0.875rem; color: #4a5568; margin-bottom: 0.75rem; }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="/" aria-label="CapturePort home">
-        <img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async">
-        <span class="brand-wordmark">CapturePort</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="/download">Download</a></li>
-          <li><a href="/privacy">Privacy</a></li>
-          <li><a href="/terms">Terms</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/pilot">Pilot</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main class="page-main container">
-    <article class="content-card">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="CapturePort home">
+      <img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async">
+      <span class="brand-wordmark">CapturePort</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="/field-reporting-app/">Field Reporting</a></li>
+        <li><a href="/offline-reporting-app/">Offline</a></li>
+        <li><a href="/marine-reporting-app/">Marine</a></li>
+        <li><a href="/download">Download</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="legal-hero">
+      <div class="legal-tag">Legal</div>
       <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: May 12, 2026</p>
-      <p>This policy explains how CapturePort handles information during pilot and early access. We may update this policy as the product evolves.</p>
-      <h2>Information we may collect</h2>
-      <ul>
-        <li>Account details such as name, email, company, and role.</li>
-        <li>Field content you upload, including photos, notes, and voice inputs.</li>
-        <li>Optional OCR output generated from images.</li>
-        <li>Optional location data when enabled by you.</li>
-        <li>Technical and usage logs for security, support, and reliability.</li>
-      </ul>
-      <h2>How we use information</h2>
-      <ul>
-        <li>To provide and improve CapturePort features.</li>
-        <li>To generate AI-assisted report drafts from your submitted inputs.</li>
-        <li>To respond to support, privacy, and service requests.</li>
-      </ul>
-      <h2>AI drafting notice</h2>
-      <p>CapturePort can help prepare report drafts. AI-generated content may contain errors or omissions. You must review and approve all outputs before operational use or sharing.</p>
-      <h2>Data retention</h2>
-      <p>We retain data only as needed for legal, security, fraud-prevention, billing, operational, and support purposes, with retention periods based on applicable requirements.</p>
-      <h2>Your requests</h2>
-      <p>For support, privacy questions, or data deletion requests, contact <a href="mailto:support@captureport.app">support@captureport.app</a>.</p>
-    </article>
-  </main>
+      <p class="legal-meta">Effective: 16 May 2026 &nbsp;·&nbsp; Last updated: 16 May 2026 &nbsp;·&nbsp; captureport.app</p>
+    </div>
 
-  <footer class="site-footer"><div class="container footer-links"><a href="/download">Download</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a><a href="/pilot">Pilot</a></div><p class="container footer-copy">© 2026 CapturePort</p></footer>
+    <div class="legal-body">
+
+      <div class="summary-box">
+        <p><strong>Plain English:</strong> CapturePort stores your projects, photos, voice notes, and reports locally on your device only. We do not upload your data anywhere, we do not require an account, and we do not sell or share your information.</p>
+      </div>
+
+      <div class="toc">
+        <p class="toc-title">Contents</p>
+        <ol>
+          <li><a href="#s1">Who we are</a></li>
+          <li><a href="#s2">What data we collect</a></li>
+          <li><a href="#s3">How data is stored</a></li>
+          <li><a href="#s4">How we use your data</a></li>
+          <li><a href="#s5">What we do not do</a></li>
+          <li><a href="#s6">Permissions (camera, microphone)</a></li>
+          <li><a href="#s7">Third-party services</a></li>
+          <li><a href="#s8">Data retention and deletion</a></li>
+          <li><a href="#s9">Children's privacy</a></li>
+          <li><a href="#s10">Changes to this policy</a></li>
+          <li><a href="#s11">Contact us</a></li>
+        </ol>
+      </div>
+
+      <div class="policy-section" id="s1">
+        <h2><span class="sec-num">1</span> Who we are</h2>
+        <p>CapturePort is a mobile field reporting application developed and operated by CapturePort. Our primary domain is <strong>captureport.app</strong>. Contact us at <strong>support@captureport.app</strong>.</p>
+      </div>
+
+      <div class="policy-section" id="s2">
+        <h2><span class="sec-num">2</span> What data we collect</h2>
+        <p>In the current version of CapturePort (v1), the app operates in fully local, offline-first mode. All data stays on your device:</p>
+        <ul>
+          <li><strong>Project data</strong> — project names, client names, vessel or site names, and job references you enter are stored only on your device.</li>
+          <li><strong>Photos</strong> — photos you capture or import are copied into local app storage and are not transmitted anywhere.</li>
+          <li><strong>Voice notes</strong> — voice recordings are stored locally on your device only.</li>
+          <li><strong>Typed notes and captions</strong> — any text you enter is stored locally on your device.</li>
+          <li><strong>Report drafts and exports</strong> — reports are generated entirely on your device. Exported files are saved locally and shared only if you choose to share them.</li>
+          <li><strong>App settings</strong> — your report identity, branding fields, and preferences are stored locally on your device.</li>
+        </ul>
+        <p>We do not collect, transmit, or store any of this data on external servers in the current version. If you email us at support@captureport.app, we receive only the information in that email, used solely to respond to you.</p>
+      </div>
+
+      <div class="policy-section" id="s3">
+        <h2><span class="sec-num">3</span> How data is stored</h2>
+        <p>All data is stored locally on your device using SQLite (for project metadata, drafts, settings) and local device file storage (for photos, voice notes, and exported files). We do not use cloud storage or remote servers in the current version.</p>
+        <div class="warn-box">
+          <p>Because all data is stored on your device, its security depends on your device's own security settings (screen lock, encryption). We recommend keeping your device secured, especially if your reports contain sensitive information.</p>
+        </div>
+        <p>Using <strong>Reset Local App Data</strong> in Settings permanently deletes all project data, captures, drafts, and export history from the app. This cannot be undone.</p>
+      </div>
+
+      <div class="policy-section" id="s4">
+        <h2><span class="sec-num">4</span> How we use your data</h2>
+        <p>Because all data remains on your device, CapturePort does not process your report content, photos, or project information for any purpose other than powering the features you use. We use locally stored data only to display your content in the app, generate report previews and export files on your device, and remember your settings between sessions.</p>
+      </div>
+
+      <div class="policy-section" id="s5">
+        <h2><span class="sec-num">5</span> What we do not do</h2>
+        <ul>
+          <li>We do <strong>not</strong> upload your photos, voice notes, reports, or project data to any server.</li>
+          <li>We do <strong>not</strong> sell, rent, or share your information or report content with third parties.</li>
+          <li>We do <strong>not</strong> use your report content for advertising, marketing, or model training.</li>
+          <li>We do <strong>not</strong> require you to create an account or log in to use the app.</li>
+          <li>We do <strong>not</strong> track your location.</li>
+          <li>We do <strong>not</strong> use invasive device identifiers such as IMEI or device fingerprinting.</li>
+          <li>We do <strong>not</strong> use your private reports as public examples, templates, or SEO content.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section" id="s6">
+        <h2><span class="sec-num">6</span> Permissions (camera and microphone)</h2>
+        <p>CapturePort requests the following device permissions:</p>
+        <ul>
+          <li><strong>Camera</strong> — used only when you actively take a photo within the app. We do not access your camera at any other time.</li>
+          <li><strong>Microphone</strong> — used only when you actively start a voice note recording. We do not access your microphone at any other time.</li>
+          <li><strong>Photo library</strong> — used only when you choose to import a photo from your device gallery. The selected photo is copied into local app storage.</li>
+        </ul>
+        <p>You can revoke permissions at any time in your device Settings. This prevents the related feature from working but does not affect data already stored in the app.</p>
+      </div>
+
+      <div class="policy-section" id="s7">
+        <h2><span class="sec-num">7</span> Third-party services</h2>
+        <p>In the current version (v1), there are no active third-party analytics, advertising, or cloud service integrations within the app. The app is built on Expo (React Native), and standard platform-level telemetry from Google (Android) may apply as part of the operating system — this is governed by Google's own privacy policy.</p>
+        <p>Future versions may integrate cloud services such as authentication and cloud storage. This Privacy Policy will be updated before any such integrations are activated.</p>
+      </div>
+
+      <div class="policy-section" id="s8">
+        <h2><span class="sec-num">8</span> Data retention and deletion</h2>
+        <p>Since all data is stored locally on your device, it is retained until you delete it, uninstall the app, or use the Reset function in Settings. Uninstalling the app removes the app's database and associated files from your device. We hold no copies of your data on any server in the current version, so no server-side deletion is required.</p>
+        <p>Questions about deletion? Contact us at <strong>support@captureport.app</strong>.</p>
+      </div>
+
+      <div class="policy-section" id="s9">
+        <h2><span class="sec-num">9</span> Children's privacy</h2>
+        <p>CapturePort is designed for professional use by adults. The app is not directed at children under 13. We do not knowingly collect information from children. If you believe a child has used the app, please contact us at <strong>support@captureport.app</strong>.</p>
+      </div>
+
+      <div class="policy-section" id="s10">
+        <h2><span class="sec-num">10</span> Changes to this policy</h2>
+        <p>We may update this Privacy Policy as we add new features such as cloud sync, user accounts, or billing. When we make significant changes, we will update the "Last updated" date and notify users through the app where practicable. Continued use of CapturePort after changes are posted constitutes acceptance of the revised policy.</p>
+      </div>
+
+      <div class="policy-section" id="s11">
+        <h2><span class="sec-num">11</span> Contact us</h2>
+        <p>Questions, concerns, or requests regarding this Privacy Policy or your data:</p>
+        <ul>
+          <li><strong>Email:</strong> support@captureport.app</li>
+          <li><strong>Website:</strong> captureport.app</li>
+        </ul>
+        <p>We aim to respond within 5 business days.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Questions about your privacy?</h3>
+        <p>We're happy to answer anything about how CapturePort handles your data.</p>
+        <a class="btn btn-primary" href="mailto:support@captureport.app">Email support@captureport.app</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-links">
+    <a href="/download">Download</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+    <a href="/pilot">Pilot</a>
+    <a href="/llms.txt">LLM Info</a>
+  </div>
+  <p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
