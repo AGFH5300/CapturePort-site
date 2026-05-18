@@ -34,3 +34,14 @@ Key pages:
 - https://captureport.app/marine-reporting-app/
 - https://captureport.app/photo-report-app/
 - https://captureport.app/ai-report-generator/
+
+## Guides and resources
+
+CapturePort publishes practical inspection reporting guides for field professionals:
+
+- https://captureport.app/guides/how-to-write-vessel-inspection-report/
+- https://captureport.app/guides/how-to-write-site-inspection-report/
+- https://captureport.app/guides/how-to-write-mep-inspection-report/
+- https://captureport.app/guides/how-to-write-property-snagging-report/
+
+These guides cover marine vessel inspection reports, construction site inspection reports, MEP/HVAC/AMC inspection reports, and property snagging reports.

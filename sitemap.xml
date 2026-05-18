@@ -12,4 +12,8 @@
 <url><loc>https://captureport.app/marine-reporting-app/</loc></url>
 <url><loc>https://captureport.app/photo-report-app/</loc></url>
 <url><loc>https://captureport.app/ai-report-generator/</loc></url>
+<url><loc>https://captureport.app/guides/how-to-write-vessel-inspection-report/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://captureport.app/guides/how-to-write-site-inspection-report/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://captureport.app/guides/how-to-write-mep-inspection-report/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://captureport.app/guides/how-to-write-property-snagging-report/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
