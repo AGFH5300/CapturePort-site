@@ -3,60 +3,160 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marine Reporting App | CapturePort</title>
-<meta name="description" content="CapturePort helps marine engineers, inspectors, and service teams prepare structured vessel and onboard inspection reports.">
+<title>Marine Reporting App for Engineers and Surveyors | CapturePort</title>
+<meta name="description" content="CapturePort is the offline-first mobile reporting app built for marine engineers, surveyors, ship managers, and attendance officers. Generate vessel inspection and service reports from your phone.">
+<meta name="keywords" content="marine reporting app, vessel inspection report app, marine survey report, ship service report, marine engineer report app, offshore reporting app, vessel attendance report">
 <link rel="canonical" href="https://captureport.app/marine-reporting-app/">
 <meta property="og:title" content="Marine Reporting App | CapturePort">
-<meta property="og:description" content="Mobile-first reporting software for marine engineers, offshore teams, inspectors, and vessel service providers.">
-<link rel="stylesheet" href="/assets/styles.css">
+<meta property="og:description" content="Mobile-first field reporting for marine service engineers, surveyors, attendance officers, and offshore teams. Works offline on vessels and at remote sites.">
+<meta property="og:type" content="website">
 <link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/captureport-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .page-hero{padding:2.5rem 0 1.5rem;border-bottom:1px solid #e2e8f0;margin-bottom:2rem}
+  .page-hero h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;color:#0D2C6B;line-height:1.2;margin-bottom:.75rem}
+  .page-hero p{font-size:1rem;color:#4a5568;max-width:640px;line-height:1.7}
+  .page-body h2{font-size:1.2rem;font-weight:700;color:#0D2C6B;margin:2rem 0 .65rem;padding-bottom:.4rem;border-bottom:2px solid #e8edf7}
+  .page-body h3{font-size:1rem;font-weight:600;color:#1a1a2e;margin:1.4rem 0 .4rem}
+  .page-body p{color:#4a5568;font-size:.94rem;line-height:1.75;margin-bottom:.85rem}
+  .page-body ul{padding-left:1.5rem;color:#4a5568;margin-bottom:.85rem}
+  .page-body li{font-size:.94rem;margin-bottom:.35rem;line-height:1.6}
+  .page-body strong{color:#1a1a2e;font-weight:600}
+  .vessel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:1rem 0 1.5rem}
+  .vessel-tag{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:.85rem;color:#374151;font-weight:500}
+  .report-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:1rem 0 1.5rem}
+  .report-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px}
+  .report-card h4{font-size:.875rem;font-weight:700;color:#0D2C6B;margin:0 0 4px}
+  .report-card p{font-size:.8rem;color:#4a5568;margin:0;line-height:1.5}
+  .callout{background:#e8edf7;border-left:3px solid #0D2C6B;border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin:1.25rem 0}
+  .callout p{margin:0;color:#0D2C6B;font-size:.9rem}
+  .cta-box{background:#0D2C6B;color:white;border-radius:12px;padding:1.75rem;margin:2.5rem 0;text-align:center}
+  .cta-box h3{color:white;margin:0 0 .5rem;font-size:1.1rem}
+  .cta-box p{color:rgba(255,255,255,.8);margin:0 0 1rem;font-size:.9rem}
+  .cta-box a{display:inline-block;background:#FFC107;color:#0D2C6B;font-weight:700;padding:.6rem 1.75rem;border-radius:8px;text-decoration:none;font-size:.9rem}
+</style>
 </head>
 <body>
+
 <header class="site-header">
 <div class="container nav-wrap">
-<a class="brand" href="/"><img class="brand-icon" src="/assets/captureport-icon.png" alt=""><span class="brand-wordmark">CapturePort</span></a>
+<a class="brand" href="/"><img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async"><span class="brand-wordmark">CapturePort</span></a>
+<nav aria-label="Main navigation">
 <ul class="nav-links">
-<li><a href="/offline-reporting-app/">Offline Reporting</a></li>
 <li><a href="/field-reporting-app/">Field Reporting</a></li>
-<li><a href="/contact">Contact</a></li>
+<li><a href="/marine-reporting-app/">Marine</a></li>
+<li><a href="/inspection-report-app/">Inspection</a></li>
+<li><a href="/download">Download</a></li>
 </ul>
+</nav>
 </div>
 </header>
-<main class="page-main container">
-<article class="content-card">
-<h1>Marine Reporting App for Engineers and Service Teams</h1>
-<p class="seo-intro">CapturePort is designed for marine service engineers, inspectors, repair teams, offshore technicians, and surveyors that prepare recurring technical reports onboard vessels and at marine facilities.</p>
-<div class="badge-list">
-<span class="badge">Marine inspections</span>
-<span class="badge">Service reports</span>
-<span class="badge">Offline-first</span>
-<span class="badge">Photo reporting</span>
+
+<main>
+<div class="container">
+<div class="page-hero">
+  <h1>Marine Reporting App for Engineers and Surveyors</h1>
+  <p>CapturePort is the offline-first mobile app built for marine service engineers, surveyors, attendance officers, and offshore teams who need to produce professional vessel reports without wasting time on paperwork after they leave the job.</p>
 </div>
-<h2>Designed around marine workflows</h2>
-<p>Marine reporting environments are different from normal office workflows. Teams often work onboard vessels, at anchor, in drydock, offshore, or inside engine rooms where quick documentation and structured reporting are critical.</p>
+
+<div class="page-body">
+
+<h2>Built around marine reporting realities</h2>
+<p>Marine inspections and service attendances happen on vessels, in engine rooms, at anchorage, in dry-dock, and at offshore facilities — environments where connectivity is unreliable, conditions are challenging, and the pressure to produce a clean report quickly is real. CapturePort is designed specifically for this.</p>
+<ul>
+  <li><strong>Fully offline</strong> — works in engine rooms, cargo holds, and remote anchorages with no signal</li>
+  <li><strong>Photo capture with instant captioning</strong> — caption each photo before you move to the next area, not hours later from memory</li>
+  <li><strong>Voice notes</strong> — record spoken observations when your hands are occupied or conditions make typing impractical</li>
+  <li><strong>PDF and Word export</strong> — generate a clean professional report before you leave the vessel or port</li>
+  <li><strong>No login required</strong> — start capturing immediately, no account setup on site</li>
+</ul>
+
 <div class="callout">
-<strong>CapturePort direction:</strong>
-<p>CapturePort focuses on helping technical teams capture field evidence quickly and convert raw observations into cleaner structured report drafts.</p>
+<p><strong>The field reporting problem:</strong> Most marine professionals leave the vessel with a phone full of uncaptioned photos and incomplete notes, then spend two hours writing the report from memory that evening. CapturePort eliminates that gap — you capture, caption, and generate the draft on board.</p>
 </div>
-<h2>Common use cases</h2>
-<div class="use-case-grid">
-<div class="link-card"><strong>Vessel inspections</strong><span>Prepare onboard findings and condition reports with photos and notes.</span></div>
-<div class="link-card"><strong>Repair attendance reports</strong><span>Track repairs, observations, and completed service work.</span></div>
-<div class="link-card"><strong>Marine survey workflows</strong><span>Organize technical findings and structured reporting for surveys.</span></div>
+
+<h2>Vessel types covered</h2>
+<p>CapturePort is used for reporting across a wide range of vessel types and marine facilities:</p>
+<div class="vessel-grid">
+  <span class="vessel-tag">Bulk carriers</span>
+  <span class="vessel-tag">Container vessels</span>
+  <span class="vessel-tag">Tankers (crude/product)</span>
+  <span class="vessel-tag">LNG / LPG carriers</span>
+  <span class="vessel-tag">General cargo vessels</span>
+  <span class="vessel-tag">RoRo vessels</span>
+  <span class="vessel-tag">Offshore supply vessels</span>
+  <span class="vessel-tag">Tugs and barges</span>
+  <span class="vessel-tag">Passenger / cruise vessels</span>
+  <span class="vessel-tag">Naval / government vessels</span>
+  <span class="vessel-tag">Yachts and superyachts</span>
+  <span class="vessel-tag">Dry dock / shipyard</span>
+  <span class="vessel-tag">Port facilities</span>
+  <span class="vessel-tag">Offshore platforms</span>
 </div>
-<section class="faq">
-<h2>Frequently Asked Questions</h2>
-<details><summary>Is CapturePort suitable for marine engineers?</summary><p>Yes. CapturePort is being positioned around field reporting workflows used by marine engineers, inspectors, repair teams, and offshore service providers.</p></details>
-<details><summary>Can reports include photos and notes?</summary><p>CapturePort supports structured reporting workflows using photos, notes, voice input, and AI-assisted report drafting.</p></details>
-<details><summary>Can users review AI-generated reports?</summary><p>Yes. All AI-generated report drafts must be reviewed and approved by users before external use.</p></details>
-</section>
-<div class="internal-links">
-<a href="/offline-reporting-app/">Offline Reporting App</a>
-<a href="/inspection-report-app/">Inspection Report App</a>
-<a href="/photo-report-app/">Photo Report App</a>
+
+<h2>Marine report types</h2>
+<p>CapturePort supports the full range of marine service and inspection report types:</p>
+<div class="report-grid">
+  <div class="report-card"><h4>Vessel attendance report</h4><p>Service visit record with scope, findings, and work completed</p></div>
+  <div class="report-card"><h4>Marine service report</h4><p>Maintenance and repair records with photo evidence</p></div>
+  <div class="report-card"><h4>Ship repair report</h4><p>Repair scope, progress, and completion documentation</p></div>
+  <div class="report-card"><h4>Vessel inspection report</h4><p>Condition survey with structured findings and recommendations</p></div>
+  <div class="report-card"><h4>Damage and defect report</h4><p>Evidence-backed defect documentation for insurance and class</p></div>
+  <div class="report-card"><h4>Equipment inspection report</h4><p>Main engine, auxiliary systems, cargo gear, safety equipment</p></div>
+  <div class="report-card"><h4>Port and offshore service report</h4><p>Port state visits, offshore facility attendances</p></div>
+  <div class="report-card"><h4>Dry-dock progress report</h4><p>Stage-by-stage repair and survey documentation</p></div>
 </div>
-</article>
+
+<h2>Who uses CapturePort in marine</h2>
+<ul>
+  <li><strong>Marine service engineers</strong> — document attendance scope, photos, work done, and recommendations before leaving the vessel</li>
+  <li><strong>Marine surveyors</strong> — capture survey findings, defect photos, and recommendations with full photo appendix</li>
+  <li><strong>Ship managers and superintendents</strong> — vessel visit records and defect tracking</li>
+  <li><strong>Port captains and attendance officers</strong> — quick attendance records with photographic evidence</li>
+  <li><strong>Loss adjusters and P&I surveyors</strong> — insurance inspection reports with evidence-backed photo documentation</li>
+  <li><strong>Offshore service teams</strong> — equipment inspection and service reports from platforms and OSVs</li>
+  <li><strong>Ship repair yards</strong> — repair progress reports and completion documentation</li>
+</ul>
+
+<h2>Marine guides and templates</h2>
+<p>Read our free guides written specifically for marine reporting professionals:</p>
+<ul>
+  <li><a href="/guides/how-to-write-vessel-inspection-report/" style="color:#0D2C6B">How to write a vessel inspection report</a> — structure, photo evidence, scope statements, and common mistakes</li>
+  <li><a href="/guides/how-to-write-vessel-attendance-report/" style="color:#0D2C6B">How to write a vessel attendance report</a> — the standard format for marine service and repair visits</li>
+  <li><a href="/guides/how-to-write-marine-service-report/" style="color:#0D2C6B">How to write a marine service report</a> — maintenance and repair documentation best practices</li>
+</ul>
+
+<div class="cta-box">
+  <h3>Try CapturePort on your next attendance</h3>
+  <p>Free to download. No login required. Works fully offline on Android.</p>
+  <a href="/download">Download free</a>
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<h3>Does CapturePort work without mobile data on board a vessel?</h3>
+<p>Yes. CapturePort is fully offline-first. All photos, voice notes, and report drafts are saved to your device. No internet connection is needed at any point to capture or generate reports. You can export the final PDF or Word file and share it when you are back in a connected area.</p>
+
+<h3>Can I produce reports in the format my client expects?</h3>
+<p>CapturePort generates structured reports from your captures. In the current version, you can add company branding, report identity, and commentary. Custom client letterhead and format matching are on the roadmap. The exported Word file is fully editable so you can adjust formatting as needed.</p>
+
+<h3>How do I handle a large number of photos in a vessel inspection report?</h3>
+<p>CapturePort lets you reorder photos, caption each one on site, and control which captures are included in the report. You can choose how many photos appear per page in the export. Reports with 20–60 photos are common for vessel inspections and work cleanly with the current export.</p>
+
+<h3>Is CapturePort suitable for use by a marine survey company with multiple surveyors?</h3>
+<p>In the current version, each user works independently on their own device. Team accounts with shared project visibility and company branding are on the product roadmap. <a href="/pilot" style="color:#0D2C6B">Join the pilot</a> to be among the first to access team features when they are released.</p>
+
+</div>
+</div>
 </main>
-<footer class="site-footer"><div class="container footer-links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a></div><p class="container footer-copy">© 2026 CapturePort</p></footer>
+
+<footer class="site-footer">
+<div class="container footer-links">
+<a href="/download">Download</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a><a href="/pilot">Pilot</a>
+</div>
+<p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p>
+</footer>
 </body>
 </html>

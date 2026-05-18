@@ -45,3 +45,11 @@ CapturePort publishes practical inspection reporting guides for field profession
 - https://captureport.app/guides/how-to-write-property-snagging-report/
 
 These guides cover marine vessel inspection reports, construction site inspection reports, MEP/HVAC/AMC inspection reports, and property snagging reports.
+
+Additional guides:
+- https://captureport.app/guides/how-to-write-marine-service-report/
+- https://captureport.app/guides/how-to-write-insurance-inspection-report/
+- https://captureport.app/guides/how-to-write-vessel-attendance-report/
+- https://captureport.app/guides/how-to-write-equipment-inspection-report/
+
+Pilot program: https://captureport.app/pilot

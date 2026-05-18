@@ -4,69 +4,265 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pilot Program | CapturePort</title>
-<meta name="description" content="CapturePort pilot program for field reporting teams.">
-<meta property="og:title" content="Pilot Program | CapturePort">
-<meta property="og:description" content="Request pilot access to CapturePort.">
+<meta name="description" content="Join the CapturePort pilot program. Free early access for marine, inspection, MEP, and field service teams. Help shape the product with your real-world feedback.">
+<link rel="canonical" href="https://captureport.app/pilot">
+<meta property="og:title" content="Join the CapturePort Pilot Program">
+<meta property="og:description" content="Free early access for field reporting teams. Marine, inspection, MEP, snagging, and service teams welcome.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://captureport.app/pilot/">
 <link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/captureport-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .pilot-hero{padding:3rem 0 2rem;border-bottom:1px solid #e2e8f0;margin-bottom:2rem}
+  .pilot-tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#0D2C6B;background:#e8edf7;border-radius:20px;padding:4px 14px;margin-bottom:1rem}
+  .pilot-hero h1{font-size:clamp(1.75rem,4vw,2.4rem);font-weight:700;color:#0D2C6B;line-height:1.2;margin-bottom:.75rem}
+  .pilot-hero p{font-size:1.05rem;color:#4a5568;max-width:600px;line-height:1.7}
+  .pilot-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  @media(max-width:680px){.pilot-layout{grid-template-columns:1fr}}
+  .pilot-form{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:1.75rem;box-shadow:0 2px 12px rgba(13,44,107,.06)}
+  .form-title{font-size:1.1rem;font-weight:700;color:#0D2C6B;margin:0 0 .25rem}
+  .form-sub{font-size:.875rem;color:#718096;margin:0 0 1.25rem}
+  .field-group{display:flex;flex-direction:column;gap:.85rem;margin-bottom:1.25rem}
+  .field label{display:block;font-size:.8rem;font-weight:600;color:#374151;margin-bottom:.3rem;letter-spacing:.02em}
+  .field input,.field select,.field textarea{width:100%;padding:.65rem .9rem;border:1px solid #d1d5db;border-radius:8px;font-size:.9rem;color:#111827;background:#fff;transition:border-color .2s;-webkit-appearance:none}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#0D2C6B;box-shadow:0 0 0 3px rgba(13,44,107,.08)}
+  .field textarea{min-height:80px;resize:vertical;font-family:inherit}
+  .field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.25rem}
+  .submit-btn{width:100%;padding:.8rem;background:#0D2C6B;color:#fff;border:none;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer;transition:opacity .2s;margin-top:.25rem}
+  .submit-btn:hover{opacity:.88}
+  .submit-btn:disabled{opacity:.5;cursor:not-allowed}
+  .form-note{font-size:.75rem;color:#9ca3af;margin-top:.75rem;text-align:center;line-height:1.5}
+  .success-state{display:none;text-align:center;padding:2rem 1rem}
+  .success-state.visible{display:block}
+  .success-icon{font-size:2.5rem;margin-bottom:.75rem}
+  .success-title{font-size:1.1rem;font-weight:700;color:#0D2C6B;margin-bottom:.5rem}
+  .success-body{font-size:.9rem;color:#4a5568;line-height:1.6}
+  /* Right column */
+  .pilot-benefits{display:flex;flex-direction:column;gap:1.25rem}
+  .benefit{display:flex;align-items:flex-start;gap:12px}
+  .benefit-icon{width:38px;height:38px;border-radius:10px;background:#e8edf7;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+  .benefit-body h3{font-size:.95rem;font-weight:700;color:#0D2C6B;margin:0 0 .2rem}
+  .benefit-body p{font-size:.875rem;color:#4a5568;margin:0;line-height:1.55}
+  .who-list{background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;padding:1.25rem 1.5rem;margin-top:.5rem}
+  .who-list h3{font-size:.85rem;font-weight:600;color:#374151;text-transform:uppercase;letter-spacing:.06em;margin:0 0 .75rem}
+  .who-list ul{padding-left:1.25rem;margin:0;color:#4a5568}
+  .who-list li{font-size:.875rem;margin-bottom:.3rem}
+  .divider{height:1px;background:#e2e8f0;margin:2rem 0}
+</style>
 </head>
 <body>
+
 <header class="site-header">
 <div class="container nav-wrap">
-<a class="brand" href="/" aria-label="CapturePort home">
-        <img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async">
-        <span class="brand-wordmark">CapturePort</span>
-      </a>
+<a class="brand" href="/"><img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async"><span class="brand-wordmark">CapturePort</span></a>
 <nav aria-label="Main navigation">
 <ul class="nav-links">
-<li>
-<a href="/download">Download</a>
-</li>
-<li>
-<a href="/privacy">Privacy</a>
-</li>
-<li>
-<a href="/terms">Terms</a>
-</li>
-<li>
-<a href="/contact">Contact</a>
-</li>
-<li>
-<a href="/pilot">Pilot</a>
-</li>
+<li><a href="/field-reporting-app/">Field Reporting</a></li>
+<li><a href="/marine-reporting-app/">Marine</a></li>
+<li><a href="/inspection-report-app/">Inspection</a></li>
+<li><a href="/download">Download</a></li>
 </ul>
 </nav>
 </div>
 </header>
-<main class="page-main container">
-<article class="content-card">
-<h1>CapturePort Pilot</h1>
-<p>
-<strong>Who it is for:</strong> Marine service engineers, surveyors, inspectors, technicians, and field supervisors who produce recurring site or job reports.</p>
-<p>
-<strong>What to expect:</strong> Early access to mobile-first workflows for capturing evidence, adding notes/voice input, and preparing report drafts.</p>
-<p>
-<strong>Feedback requested:</strong> Report clarity, capture flow speed, reliability in real field conditions, and practical improvements.</p>
-<p>
-<strong>Development status:</strong> CapturePort is under active development and pilot features may change.</p>
-<p>
-<a class="btn btn-primary" href="mailto:pilot@captureport.app?subject=CapturePort%20Pilot%20Request">Request Pilot Access</a>
-</p>
-</article>
+
+<main>
+<div class="container">
+  <div class="pilot-hero">
+    <div class="pilot-tag">Early access</div>
+    <h1>Join the CapturePort Pilot</h1>
+    <p>Free access for field teams who want to replace slow, manual reporting with a faster, cleaner mobile workflow. Your feedback directly shapes what we build next.</p>
+  </div>
+
+  <div class="pilot-layout">
+
+    <!-- Form -->
+    <div>
+      <div class="pilot-form" id="pilot-form-wrap">
+        <p class="form-title">Request pilot access</p>
+        <p class="form-sub">Takes 60 seconds. We'll be in touch within 1 business day.</p>
+
+        <form id="pilot-form" novalidate>
+          <div class="field-group">
+            <div class="field">
+              <label for="f-name">Full name *</label>
+              <input type="text" id="f-name" name="name" placeholder="Ahmed Al-Rashidi" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="f-email">Work email *</label>
+              <input type="email" id="f-email" name="email" placeholder="ahmed@marineservices.com" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="f-company">Company name</label>
+              <input type="text" id="f-company" name="company" placeholder="Gulf Marine Services" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="f-role">Your role</label>
+              <select id="f-role" name="role">
+                <option value="">Select your role…</option>
+                <option>Marine Surveyor</option>
+                <option>Marine Engineer / Superintendent</option>
+                <option>Ship Manager</option>
+                <option>Port Captain / Attendance Officer</option>
+                <option>Loss Adjuster / Insurance Surveyor</option>
+                <option>Construction Site Engineer</option>
+                <option>Facilities / MEP Engineer</option>
+                <option>Property Inspector / Snagging Consultant</option>
+                <option>HVAC / AMC Technician</option>
+                <option>Field Service Technician</option>
+                <option>Company Owner / Manager</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-industry">Industry</label>
+              <select id="f-industry" name="industry">
+                <option value="">Select your industry…</option>
+                <option>Marine / Shipping</option>
+                <option>Offshore / Oil &amp; Gas</option>
+                <option>Insurance / Loss Adjustment</option>
+                <option>Construction / Civil</option>
+                <option>Facilities Management</option>
+                <option>MEP / HVAC</option>
+                <option>Real Estate / Property</option>
+                <option>Fire Safety / Compliance</option>
+                <option>Equipment Maintenance</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-reports">How many reports does your team produce per month?</label>
+              <select id="f-reports" name="reports_per_month">
+                <option value="">Select a range…</option>
+                <option>1–5</option>
+                <option>6–20</option>
+                <option>21–50</option>
+                <option>50+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-pain">What is your biggest reporting pain point? (optional)</label>
+              <textarea id="f-pain" name="pain_point" placeholder="e.g. Writing reports from memory after leaving the vessel, organising 50+ photos..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">Request pilot access →</button>
+          <p class="form-note">Free access during the pilot. No credit card. No account required to use the app.</p>
+        </form>
+
+        <div class="success-state" id="success-state">
+          <div class="success-icon">✅</div>
+          <p class="success-title">Request received — thank you.</p>
+          <p class="success-body">We will be in touch within 1 business day with your pilot access details.<br><br>In the meantime, <a href="/download" style="color:#0D2C6B;font-weight:600">download CapturePort</a> and start using it — no account needed.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits column -->
+    <div class="pilot-benefits">
+      <div class="benefit">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-body">
+          <h3>Free full access during the pilot</h3>
+          <p>All features unlocked at no cost. Export unlimited reports during the pilot period.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">✈️</div>
+        <div class="benefit-body">
+          <h3>Works fully offline</h3>
+          <p>Designed for engine rooms, remote sites, and low-signal environments. No internet connection required to capture or export.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">📄</div>
+        <div class="benefit-body">
+          <h3>Professional PDF and Word export</h3>
+          <p>Generate clean reports directly from your phone. Photo appendix, captions, and commentary included automatically.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">💬</div>
+        <div class="benefit-body">
+          <h3>Your feedback shapes the product</h3>
+          <p>Pilot users get direct access to the team. What you need gets built first.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="who-list">
+        <h3>Who we are looking for</h3>
+        <ul>
+          <li>Marine service engineers and attendants</li>
+          <li>Marine and insurance surveyors</li>
+          <li>Ship managers and superintendents</li>
+          <li>Construction and site engineers</li>
+          <li>MEP / HVAC / AMC teams</li>
+          <li>Property snagging consultants</li>
+          <li>Facilities and maintenance teams</li>
+          <li>Loss adjusters and claims inspectors</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
 </main>
+
 <footer class="site-footer">
 <div class="container footer-links">
-<a href="/download">Download</a>
-<a href="/privacy">Privacy</a>
-<a href="/terms">Terms</a>
-<a href="/contact">Contact</a>
-<a href="/pilot">Pilot</a>
+<a href="/download">Download</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a><a href="/pilot">Pilot</a>
 </div>
-<p class="container footer-copy">© 2026 CapturePort</p>
+<p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p>
 </footer>
+
+<script>
+document.getElementById('pilot-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form));
+
+  if (!data.name || !data.email) {
+    alert('Please enter your name and email to continue.');
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  // Send to Formspree (replace FORM_ID with your Formspree endpoint)
+  // To set up: go to formspree.io, create a free account, create a form,
+  // and replace REPLACE_WITH_FORMSPREE_ID below with your form ID.
+  try {
+    const res = await fetch('https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (res.ok) {
+      document.getElementById('pilot-form-wrap').querySelector('form').style.display = 'none';
+      document.getElementById('success-state').classList.add('visible');
+    } else {
+      throw new Error('Server error');
+    }
+  } catch {
+    // Fallback: open mailto link so no submission is ever lost
+    const subject = encodeURIComponent('CapturePort Pilot Request');
+    const body = encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company||''}\nRole: ${data.role||''}\nIndustry: ${data.industry||''}\nReports/month: ${data.reports_per_month||''}\nPain point: ${data.pain_point||''}`
+    );
+    window.location.href = `mailto:support@captureport.app?subject=${subject}&body=${body}`;
+    btn.disabled = false;
+    btn.textContent = 'Request pilot access →';
+  }
+});
+</script>
 </body>
 </html>
