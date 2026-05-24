@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete My Data | CapturePort</title>
+<meta name="description" content="Request deletion of specific data from your CapturePort account without closing your account.">
+<meta property="og:title" content="Delete My Data | CapturePort">
+<meta property="og:description" content="Request deletion of specific data from your CapturePort account.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://captureport.app/delete-data/">
+<link rel="canonical" href="https://captureport.app/delete-data/">
+<link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/captureport-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .info-band { background: #eef5fb; border: 1px solid #c8ddef; border-left: 4px solid var(--brand-blue); border-radius: .9rem; padding: 1rem 1.2rem; margin-bottom: 1.5rem; }
+  .info-band p { margin: 0; color: #1a3a5c; font-size: .95rem; }
+  .data-type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .8rem; margin-bottom: 1.5rem; }
+  .data-type-card { background: #fff; border: 1px solid var(--border); border-radius: .8rem; padding: 1rem; }
+  .data-type-card .tag { display: inline-block; font-size: .72rem; font-weight: 700; padding: 2px 8px; border-radius: 6px; margin-bottom: .5rem; }
+  .tag-partial { background: #fff3cd; color: #7a5200; }
+  .tag-full { background: #fde8e8; color: #b91c1c; }
+  .data-type-card h3 { font-size: .9rem; color: var(--brand-blue); margin: 0 0 4px; }
+  .data-type-card p { font-size: .83rem; color: var(--muted); margin: 0; }
+  .steps-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+  .steps-list li { display: flex; gap: 1rem; align-items: flex-start; padding: .9rem 1rem; background: #fff; border: 1px solid var(--border); border-bottom: none; }
+  .steps-list li:first-child { border-radius: .7rem .7rem 0 0; }
+  .steps-list li:last-child  { border-bottom: 1px solid var(--border); border-radius: 0 0 .7rem .7rem; }
+  .step-num { flex-shrink: 0; width: 26px; height: 26px; background: #0D2C6B; color: #fff; border-radius: 50%; font-size: .78rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .step-body strong { color: var(--brand-blue); display: block; margin-bottom: 3px; }
+  .step-body span { color: var(--muted); font-size: .92rem; }
+  .data-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: 1.5rem; }
+  .data-table th { background: var(--brand-blue); color: #fff; padding: .6rem .9rem; text-align: left; font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+  .data-table th:first-child { border-radius: .5rem 0 0 0; }
+  .data-table th:last-child  { border-radius: 0 .5rem 0 0; }
+  .data-table td { padding: .65rem .9rem; border-bottom: 1px solid var(--border); color: var(--muted); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td:first-child { color: var(--text); font-weight: 600; }
+  .data-table { border: 1px solid var(--border); border-radius: .7rem; overflow: hidden; }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .75rem; font-weight: 700; }
+  .pill-yes  { background: #e6f4ed; color: #166534; }
+  .pill-no   { background: #f0f0f0; color: #555; }
+  .pill-keep { background: #e8f1fd; color: #1a4faa; }
+  .cta-band { background: var(--brand-blue); border-radius: .9rem; padding: 1.4rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .cta-band p { color: #a8c4e8; margin: 4px 0 0; font-size: .9rem; }
+  .cta-band h3 { color: #fff; margin: 0; font-size: 1rem; }
+  .section-label { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; }
+  h2.sub { font-size: 1.1rem; margin: 0 0 .9rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="CapturePort home">
+      <img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async">
+      <span class="brand-wordmark">CapturePort</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="/download">Download</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/pilot">Pilot</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-main container">
+
+  <p class="eyebrow">Data Control</p>
+  <h1>Delete My Data</h1>
+  <p class="lead">Request deletion of specific data from your CapturePort account — without closing your account. You stay in control of what's kept and what's removed.</p>
+
+  <div class="info-band">
+    <p><strong>Your account stays active.</strong> This page covers selective data deletion. If you want to permanently close your account and remove everything, visit the <a href="/delete-account/">Delete Account</a> page instead.</p>
+  </div>
+
+  <div class="content-card" style="margin-bottom:1.5rem;">
+    <div class="section-label">What you can request to delete</div>
+    <h2 class="sub">Types of data eligible for deletion</h2>
+    <div class="data-type-grid">
+      <div class="data-type-card">
+        <span class="tag tag-partial">Selective</span>
+        <h3>Projects &amp; reports</h3>
+        <p>One or more named projects, inspection reports, or captured items.</p>
+      </div>
+      <div class="data-type-card">
+        <span class="tag tag-partial">Selective</span>
+        <h3>Photos &amp; media</h3>
+        <p>Specific photos or all media from a project.</p>
+      </div>
+      <div class="data-type-card">
+        <span class="tag tag-partial">Selective</span>
+        <h3>Company branding</h3>
+        <p>Your uploaded logo or letterhead template.</p>
+      </div>
+      <div class="data-type-card">
+        <span class="tag tag-full">Full wipe</span>
+        <h3>All project data</h3>
+        <p>All projects and reports — keeping only your account profile active.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card" style="margin-bottom:1.5rem;">
+    <div class="section-label">Process</div>
+    <h2 class="sub">How to submit a data deletion request</h2>
+    <ul class="steps-list">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Identify the data you want removed</strong>
+          <span>Note the project name(s), report title(s), or data category. The more specific, the faster we can process it.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Email us from your registered address</strong>
+          <span>Send your request to <a href="mailto:support@captureport.app">support@captureport.app</a> with the subject: <em>"Data Deletion Request"</em>. Describe what you want removed.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>We confirm within 2 business days</strong>
+          <span>We'll acknowledge your request and confirm which data will be deleted and when.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Deletion completed within 30 days</strong>
+          <span>Requested data is permanently removed within 30 days. You'll receive a confirmation once complete. Your account remains active throughout.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content-card" style="margin-bottom:1.5rem;">
+    <div class="section-label">Retention</div>
+    <h2 class="sub">What can and cannot be deleted</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>Can be deleted</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Projects &amp; inspection reports</td><td><span class="pill pill-yes">Yes</span></td><td>Within 30 days of request</td></tr>
+        <tr><td>Photos &amp; captured media</td><td><span class="pill pill-yes">Yes</span></td><td>Within 30 days of request</td></tr>
+        <tr><td>Company logo / letterhead</td><td><span class="pill pill-yes">Yes</span></td><td>Within 30 days of request</td></tr>
+        <tr><td>Exported PDF / Word reports</td><td><span class="pill pill-yes">Yes</span></td><td>Within 30 days of request</td></tr>
+        <tr><td>Account email &amp; profile</td><td><span class="pill pill-no">Account deletion required</span></td><td><a href="/delete-account/">Delete account</a></td></tr>
+        <tr><td>Billing &amp; payment records</td><td><span class="pill pill-no">Not deletable</span></td><td>7 years (legal requirement)</td></tr>
+        <tr><td>Anonymised usage analytics</td><td><span class="pill pill-no">Not deletable</span></td><td>Not linked to your identity</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cta-band">
+    <div>
+      <h3>Submit a data deletion request</h3>
+      <p>Email us from your registered account address with the details.</p>
+    </div>
+    <a class="btn btn-yellow" href="mailto:support@captureport.app?subject=Data%20Deletion%20Request">Email your request</a>
+  </div>
+
+  <div class="internal-links">
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/delete-account/">Delete Account</a>
+    <a href="/terms">Terms of Service</a>
+    <a href="/contact">Contact Us</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-links">
+    <a href="/download">Download</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+    <a href="/pilot">Pilot</a>
+  </div>
+  <p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

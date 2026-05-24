@@ -4,62 +4,159 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Delete Account | CapturePort</title>
-<meta name="description" content="How to request deletion of your CapturePort account.">
+<meta name="description" content="How to request permanent deletion of your CapturePort account and associated data.">
 <meta property="og:title" content="Delete Account | CapturePort">
-<meta property="og:description" content="Steps to request CapturePort account deletion.">
+<meta property="og:description" content="Steps to request CapturePort account and data deletion.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://captureport.app/delete-account/">
+<link rel="canonical" href="https://captureport.app/delete-account/">
 <link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/captureport-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/styles.css">
+<style>
+  .warn-band { background: #fff3cd; border: 1px solid #f5c842; border-left: 4px solid #e6a800; border-radius: .9rem; padding: 1rem 1.2rem; margin-bottom: 1.5rem; }
+  .warn-band p { margin: 0; color: #6b4a00; font-size: .95rem; }
+  .steps-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+  .steps-list li { display: flex; gap: 1rem; align-items: flex-start; padding: .9rem 1rem; background: #fff; border: 1px solid var(--border); border-bottom: none; }
+  .steps-list li:first-child { border-radius: .7rem .7rem 0 0; }
+  .steps-list li:last-child  { border-bottom: 1px solid var(--border); border-radius: 0 0 .7rem .7rem; }
+  .step-num { flex-shrink: 0; width: 26px; height: 26px; background: var(--brand-blue); color: #fff; border-radius: 50%; font-size: .78rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .step-body strong { color: var(--brand-blue); display: block; margin-bottom: 3px; }
+  .step-body span { color: var(--muted); font-size: .92rem; }
+  .data-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: 1.5rem; }
+  .data-table th { background: var(--brand-blue); color: #fff; padding: .6rem .9rem; text-align: left; font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; }
+  .data-table th:first-child { border-radius: .5rem 0 0 0; }
+  .data-table th:last-child  { border-radius: 0 .5rem 0 0; }
+  .data-table td { padding: .65rem .9rem; border-bottom: 1px solid var(--border); color: var(--muted); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table td:first-child { color: var(--text); font-weight: 600; }
+  .data-table { border: 1px solid var(--border); border-radius: .7rem; overflow: hidden; }
+  .pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: .75rem; font-weight: 700; }
+  .pill-del  { background: #fde8e8; color: #b91c1c; }
+  .pill-keep { background: #e8f1fd; color: #1a4faa; }
+  .cta-band { background: var(--brand-blue); border-radius: .9rem; padding: 1.4rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .cta-band p { color: #a8c4e8; margin: 4px 0 0; font-size: .9rem; }
+  .cta-band h3 { color: #fff; margin: 0; font-size: 1rem; }
+  .section-label { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .5rem; }
+  h2.sub { font-size: 1.1rem; margin: 0 0 .9rem; }
+</style>
 </head>
 <body>
+
 <header class="site-header">
-<div class="container nav-wrap">
-<a class="brand" href="/" aria-label="CapturePort home">
-        <img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async">
-        <span class="brand-wordmark">CapturePort</span>
-      </a>
-<nav aria-label="Main navigation">
-<ul class="nav-links">
-<li>
-<a href="/download">Download</a>
-</li>
-<li>
-<a href="/privacy">Privacy</a>
-</li>
-<li>
-<a href="/terms">Terms</a>
-</li>
-<li>
-<a href="/contact">Contact</a>
-</li>
-<li>
-<a href="/pilot">Pilot</a>
-</li>
-</ul>
-</nav>
-</div>
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="CapturePort home">
+      <img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async">
+      <span class="brand-wordmark">CapturePort</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="/download">Download</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/pilot">Pilot</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
 <main class="page-main container">
-<article class="content-card">
-<h1>Delete Account</h1>
-<p>Email <a href="mailto:support@captureport.app">support@captureport.app</a> from your registered email address to request account deletion.</p>
-<p>Use the subject line: <strong>Delete my CapturePort account</strong>.</p>
-<p>Include your company name if applicable.</p>
-<p>Deletion requests may be subject to legal, security, fraud-prevention, billing, or operational retention requirements.</p>
-</article>
+
+  <p class="eyebrow">Account Management</p>
+  <h1>Delete Your Account</h1>
+  <p class="lead">Request permanent deletion of your CapturePort account and all associated data. This action cannot be undone.</p>
+
+  <div class="warn-band">
+    <p><strong>⚠ Permanent action.</strong> Once your account is deleted, all your projects, inspection reports, photos, and exported files stored in CapturePort will be permanently removed. Please export any reports you wish to keep before submitting your request.</p>
+  </div>
+
+  <div class="content-card" style="margin-bottom:1.5rem;">
+    <div class="section-label">Step-by-step</div>
+    <h2 class="sub">How to request account deletion</h2>
+    <ul class="steps-list">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Export any reports you need</strong>
+          <span>Open CapturePort, go to each project and export any PDF or Word reports you want to keep. Once deleted, these cannot be recovered.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Email us from your registered address</strong>
+          <span>Send your request to <a href="mailto:support@captureport.app">support@captureport.app</a> with the subject: <em>"Account Deletion Request"</em>. Include your company name if applicable.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>We confirm within 2 business days</strong>
+          <span>We'll send a confirmation email acknowledging your request and the expected deletion date.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Deletion completed within 30 days</strong>
+          <span>Your account and all associated data will be permanently deleted within 30 days of your confirmed request. You'll receive a final confirmation when complete.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content-card" style="margin-bottom:1.5rem;">
+    <div class="section-label">Data handling</div>
+    <h2 class="sub">What gets deleted and what's retained</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data type</th>
+          <th>Action</th>
+          <th>Retention period</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Account &amp; profile (email, name)</td><td><span class="pill pill-del">Deleted</span></td><td>Within 30 days</td></tr>
+        <tr><td>Projects &amp; inspection reports</td><td><span class="pill pill-del">Deleted</span></td><td>Within 30 days</td></tr>
+        <tr><td>Photos &amp; captured media</td><td><span class="pill pill-del">Deleted</span></td><td>Within 30 days</td></tr>
+        <tr><td>Exported PDF / Word files</td><td><span class="pill pill-del">Deleted</span></td><td>Within 30 days</td></tr>
+        <tr><td>Company logo / letterhead</td><td><span class="pill pill-del">Deleted</span></td><td>Within 30 days</td></tr>
+        <tr><td>Billing &amp; transaction records</td><td><span class="pill pill-keep">Retained</span></td><td>7 years (legal requirement)</td></tr>
+        <tr><td>Anonymised usage analytics</td><td><span class="pill pill-keep">Retained</span></td><td>Indefinitely (not linked to you)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cta-band">
+    <div>
+      <h3>Ready to proceed?</h3>
+      <p>Email us from your registered account address to begin.</p>
+    </div>
+    <a class="btn btn-yellow" href="mailto:support@captureport.app?subject=Account%20Deletion%20Request">Email deletion request</a>
+  </div>
+
+  <div class="internal-links">
+    <a href="/privacy">Privacy Policy</a>
+    <a href="/delete-data/">Delete My Data</a>
+    <a href="/terms">Terms of Service</a>
+    <a href="/contact">Contact Us</a>
+  </div>
+
 </main>
+
 <footer class="site-footer">
-<div class="container footer-links">
-<a href="/download">Download</a>
-<a href="/privacy">Privacy</a>
-<a href="/terms">Terms</a>
-<a href="/contact">Contact</a>
-<a href="/pilot">Pilot</a>
-</div>
-<p class="container footer-copy">© 2026 CapturePort</p>
+  <div class="container footer-links">
+    <a href="/download">Download</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+    <a href="/pilot">Pilot</a>
+  </div>
+  <p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
