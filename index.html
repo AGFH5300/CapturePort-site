@@ -1,113 +1,187 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CapturePort | Offline Field Reporting App for Engineers and Inspectors</title>
-  <meta name="description" content="CapturePort is an offline-first AI-assisted field reporting app for engineers, inspectors, surveyors, marine service teams, and technicians.">
-  <meta name="keywords" content="field reporting app, offline reporting app, inspection reporting app, marine reporting app, photo report app, AI report generator">
-  <link rel="canonical" href="https://captureport.app/">
-  <meta property="og:title" content="CapturePort | Offline Field Reporting App">
-  <meta property="og:description" content="Capture photos, notes, voice inputs, and prepare professional AI-assisted report drafts in the field.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://captureport.app/">
-  <meta property="og:image" content="https://captureport.app/assets/captureport-logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CapturePort | Offline Field Reporting App">
-  <meta name="twitter:description" content="AI-assisted field reporting for engineers, inspectors, surveyors, marine service teams, and technicians.">
-  <meta name="twitter:image" content="https://captureport.app/assets/captureport-logo.png">
-  <link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/assets/captureport-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/assets/styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://captureport.app/#organization",
-        "name": "CapturePort",
-        "url": "https://captureport.app/",
-        "logo": "https://captureport.app/assets/captureport-logo.png",
-        "email": "support@captureport.app"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://captureport.app/#software",
-        "name": "CapturePort",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Android, iOS",
-        "description": "Offline-first AI-assisted field reporting app for engineers, inspectors, surveyors, marine service teams, and technicians.",
-        "url": "https://captureport.app/",
-        "publisher": { "@id": "https://captureport.app/#organization" }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://captureport.app/#website",
-        "name": "CapturePort",
-        "url": "https://captureport.app/",
-        "publisher": { "@id": "https://captureport.app/#organization" }
-      }
-    ]
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CapturePort | Field Reporting App for Engineers, Surveyors & Inspectors</title>
+<meta name="description" content="CapturePort is the offline-first mobile field reporting app for engineers, inspectors, surveyors, and service teams. Capture photos on site, generate professional PDF and Word reports before you leave.">
+<meta name="keywords" content="field reporting app, offline reporting app, inspection report app, marine reporting app, photo report app, vessel inspection app">
+<link rel="canonical" href="https://captureport.app/">
+<meta property="og:title" content="CapturePort — Field Reporting from Your Phone">
+<meta property="og:description" content="Capture photos with captions on site. Generate professional PDF and Word reports before you leave. Works fully offline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://captureport.app/">
+<meta property="og:image" content="https://captureport.app/assets/captureport-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/captureport-favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/captureport-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://captureport.app/#organization","name":"CapturePort","url":"https://captureport.app/","logo":"https://captureport.app/assets/captureport-logo.png","email":"support@captureport.app"},{"@type":"SoftwareApplication","@id":"https://captureport.app/#software","name":"CapturePort","applicationCategory":"BusinessApplication","operatingSystem":"Android","description":"Offline-first mobile field reporting app for engineers, inspectors, surveyors, and service teams.","url":"https://captureport.app/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://captureport.app/#organization"}}]}</script>
+<style>
+/* Hero */
+.hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid #e2e8f0;margin-bottom:2.5rem}
+.hero-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#0D2C6B;margin-bottom:.75rem}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;color:#0D2C6B;line-height:1.1;margin-bottom:1rem}
+.hero h1 em{font-style:normal;color:#FFC107}
+.hero-lead{font-size:1.05rem;color:#4a5568;max-width:580px;line-height:1.7;margin-bottom:2rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:2rem}
+.btn-primary{display:inline-block;background:#0D2C6B;color:#fff;font-weight:700;padding:.7rem 1.75rem;border-radius:10px;text-decoration:none;font-size:.95rem;transition:opacity .2s}
+.btn-primary:hover{opacity:.88}
+.btn-ghost{display:inline-block;color:#0D2C6B;font-weight:600;padding:.7rem 1.75rem;border:1.5px solid #d1d9e6;border-radius:10px;text-decoration:none;font-size:.95rem;transition:border-color .2s}
+.btn-ghost:hover{border-color:#0D2C6B}
+.hero-proof{font-size:.8rem;color:#9ca3af}
+/* Problem/solution */
+.problem-strip{background:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;padding:1.25rem 0;margin-bottom:2.5rem}
+.problem-inner{display:flex;align-items:center;gap:16px;font-size:.9rem;color:#4a5568}
+.problem-inner strong{color:#1a1a2e}
+/* How it works */
+.section-label{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#0D2C6B;margin-bottom:.5rem}
+.section-title{font-size:clamp(1.3rem,3vw,1.75rem);font-weight:700;color:#0D2C6B;margin-bottom:.6rem}
+.section-sub{color:#4a5568;font-size:.94rem;line-height:1.7;margin-bottom:1.75rem;max-width:560px}
+.steps{display:flex;flex-direction:column;gap:14px;margin-bottom:2rem}
+.step{display:flex;align-items:flex-start;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+.step-num{width:36px;height:36px;border-radius:18px;background:#0D2C6B;color:#fff;font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step h3{font-size:.95rem;font-weight:700;color:#0D2C6B;margin:0 0 4px}
+.step p{font-size:.85rem;color:#4a5568;margin:0;line-height:1.5}
+/* Features */
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:2rem}
+.feature-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+.feature-card h3{font-size:.9rem;font-weight:700;color:#0D2C6B;margin:0 0 5px}
+.feature-card p{font-size:.82rem;color:#4a5568;margin:0;line-height:1.5}
+/* Industries */
+.industry-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:2rem}
+.industry-card{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px;text-decoration:none;color:inherit;transition:border-color .2s}
+.industry-card:hover{border-color:#0D2C6B}
+.industry-icon{font-size:18px;flex-shrink:0}
+.industry-name{font-size:.875rem;font-weight:600;color:#0D2C6B}
+.industry-desc{font-size:.78rem;color:#718096;margin-top:2px}
+/* Pilot CTA */
+.pilot-cta{background:#0D2C6B;color:white;border-radius:14px;padding:2rem;margin:2.5rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.pilot-cta-text h2{color:white;margin:0 0 .4rem;font-size:1.2rem}
+.pilot-cta-text p{color:rgba(255,255,255,.8);margin:0;font-size:.9rem}
+.btn-yellow{display:inline-block;background:#FFC107;color:#0D2C6B;font-weight:700;padding:.7rem 1.75rem;border-radius:10px;text-decoration:none;font-size:.95rem;white-space:nowrap}
+/* Guides */
+.guides-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:1rem}
+.guide-link{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;text-decoration:none;color:#0D2C6B;font-size:.9rem;font-weight:600;transition:border-color .2s,background .2s}
+.guide-link:hover{background:#f8fafc;border-color:#0D2C6B}
+.guide-link span{display:block;font-size:.78rem;font-weight:400;color:#718096;margin-top:3px}
+.divider{height:1px;background:#e2e8f0;margin:2.5rem 0}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="/" aria-label="CapturePort home">
-        <img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async">
-        <span class="brand-wordmark">CapturePort</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="/field-reporting-app/">Field Reporting</a></li>
-          <li><a href="/offline-reporting-app/">Offline</a></li>
-          <li><a href="/marine-reporting-app/">Marine</a></li>
-          <li><a href="/download">Download</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="/"><img class="brand-icon" src="/assets/captureport-icon.png" alt="" width="1024" height="1024" decoding="async"><span class="brand-wordmark">CapturePort</span></a>
+<nav aria-label="Main navigation"><ul class="nav-links">
+<li><a href="/field-reporting-app/">Field Reporting</a></li>
+<li><a href="/marine-reporting-app/">Marine</a></li>
+<li><a href="/inspection-report-app/">Inspection</a></li>
+<li><a href="/download">Download</a></li>
+</ul></nav>
+</div>
+</header>
+<main>
+<div class="container">
 
-  <main>
-    <section class="hero container">
-      <p class="eyebrow">Offline-first AI-assisted field reporting</p>
-      <h1>Capture. Report. Done.</h1>
-      <p class="lead">CapturePort helps engineers, inspectors, surveyors, marine service teams, and technicians capture photos, notes, voice inputs, and prepare clean professional report drafts.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="/download">Download App</a>
-        <a class="btn btn-secondary" href="/pilot">Join Pilot</a>
-        <a class="btn btn-secondary" href="/field-reporting-app/">Explore Use Cases</a>
-      </div>
-    </section>
+<!-- Hero -->
+<section class="hero">
+  <p class="hero-eyebrow">Offline-first mobile field reporting</p>
+  <h1>Capture. Report. <em>Done.</em></h1>
+  <p class="hero-lead">CapturePort turns your field photos, voice notes, and observations into professional PDF and Word reports — directly from your phone, before you leave the site. No internet required.</p>
+  <div class="hero-cta">
+    <a href="/download" class="btn-primary">Download free for Android →</a>
+    <a href="/pilot" class="btn-ghost">Join the pilot program</a>
+  </div>
+  <p class="hero-proof">Free to download · No account required · Works offline in engine rooms, vessels, and remote sites</p>
+</section>
 
-    <section class="container features" aria-label="CapturePort features">
-      <article class="card"><h2>Capture field evidence</h2><p>Collect photos, observations, and job details from real field conditions, including vessel and industrial environments.</p></article>
-      <article class="card"><h2>Add notes and voice input</h2><p>Record technical details quickly with structured notes and voice-assisted reporting workflows.</p></article>
-      <article class="card"><h2>Prepare AI-assisted drafts</h2><p>Turn raw field inputs into cleaner report drafts while keeping the user in control of final review.</p></article>
-      <article class="card"><h2>Review before sharing</h2><p>Validate every report section before sending anything to clients, class, managers, or external stakeholders.</p></article>
-    </section>
+<!-- Problem strip -->
+<div class="problem-strip">
+  <div class="container problem-inner">
+    <strong>The field reporting problem:</strong> Most engineers leave the job with 50 uncaptioned photos and spend 2+ hours writing the report from memory. CapturePort eliminates that.
+  </div>
+</div>
 
-    <section class="container section-block">
-      <h2>Built for field teams, not office-only reporting</h2>
-      <p>CapturePort is an offline-first mobile reporting app direction for service engineers, inspectors, surveyors, repair teams, offshore teams, field supervisors, and technical service companies.</p>
-      <div class="internal-links">
-        <a href="/offline-reporting-app/">Offline Reporting App</a>
-        <a href="/inspection-report-app/">Inspection Report App</a>
-        <a href="/marine-reporting-app/">Marine Reporting App</a>
-        <a href="/photo-report-app/">Photo Report App</a>
-        <a href="/ai-report-generator/">AI Report Generator</a>
-      </div>
-    </section>
+<!-- How it works -->
+<section style="margin-bottom:2.5rem">
+  <p class="section-label">How it works</p>
+  <p class="section-title">From job site to report in minutes</p>
+  <p class="section-sub">Caption photos as you take them. Record voice observations. Then export a professional report before you leave — all offline.</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div><h3>Create a project</h3><p>Name the job, add vessel or site details, client, and job reference. Takes 20 seconds.</p></div></div>
+    <div class="step"><div class="step-num">2</div><div><h3>Capture on site</h3><p>Photos with captions, voice notes, and typed observations — saved locally on your device. No internet needed.</p></div></div>
+    <div class="step"><div class="step-num">3</div><div><h3>Review captures</h3><p>Swipe through your captures, edit captions, reorder photos. Get the sequence right before exporting.</p></div></div>
+    <div class="step"><div class="step-num">4</div><div><h3>Export and share</h3><p>PDF (polished, print-ready) or Word (editable). Photo appendix built automatically. Share via email, WhatsApp, or any app.</p></div></div>
+  </div>
+</section>
 
-    <section class="container trust-note" aria-label="Important disclaimer">
-      <p><strong>AI-generated reports are drafts.</strong> Users must review and approve all outputs before use.</p>
-    </section>
-  </main>
+<div class="divider"></div>
 
-  <footer class="site-footer"><div class="container footer-links"><a href="/download">Download</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a><a href="/pilot">Pilot</a><a href="/llms.txt">LLM Info</a></div><p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p></footer>
+<!-- Features -->
+<section style="margin-bottom:2.5rem">
+  <p class="section-label">Features</p>
+  <p class="section-title">Built for real field conditions</p>
+  <div class="feature-grid">
+    <div class="feature-card"><h3>✈️ Fully offline</h3><p>Works in engine rooms, vessels at anchorage, remote sites, and underground facilities. No signal needed at any stage.</p></div>
+    <div class="feature-card"><h3>📷 Photo capture with instant captions</h3><p>Caption each photo before you move to the next area — not hours later from memory.</p></div>
+    <div class="feature-card"><h3>🎙 Voice notes</h3><p>Record spoken observations. Auto-labelled from context — matched to the current photo or sequentially numbered.</p></div>
+    <div class="feature-card"><h3>🔃 Photo reorder</h3><p>Move photos into the right order before exporting. Step controls or direct position jump.</p></div>
+    <div class="feature-card"><h3>📄 PDF and Word export</h3><p>PDF is polished and print-ready. Word is fully editable — ideal for supervisors who need to review or format before sending to the client.</p></div>
+    <div class="feature-card"><h3>🔒 Local storage</h3><p>Reports live on your device. Nothing leaves your phone unless you share it. Cloud backup is an optional future upgrade.</p></div>
+    <div class="feature-card"><h3>📋 10 report templates</h3><p>Marine service, vessel attendance, inspection, damage/defect, equipment inspection, maintenance, and more.</p></div>
+    <div class="feature-card"><h3>🚀 No login required</h3><p>Download and start capturing immediately. No account setup on site.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Industries -->
+<section style="margin-bottom:2.5rem">
+  <p class="section-label">Industries</p>
+  <p class="section-title">Purpose-built for field professionals</p>
+  <div class="industry-grid">
+    <a href="/marine-reporting-app/" class="industry-card"><span class="industry-icon">⚓</span><div><div class="industry-name">Marine &amp; Offshore</div><div class="industry-desc">Vessel service, survey, attendance reports</div></div></a>
+    <a href="/inspection-report-app/" class="industry-card"><span class="industry-icon">🔍</span><div><div class="industry-name">Inspection</div><div class="industry-desc">Site, equipment, and condition reports</div></div></a>
+    <a href="/field-reporting-app/" class="industry-card"><span class="industry-icon">🏗</span><div><div class="industry-name">Construction</div><div class="industry-desc">Progress, snagging, and defect reports</div></div></a>
+    <a href="/field-reporting-app/" class="industry-card"><span class="industry-icon">🔧</span><div><div class="industry-name">MEP / HVAC</div><div class="industry-desc">Maintenance, service, and inspection</div></div></a>
+    <a href="/field-reporting-app/" class="industry-card"><span class="industry-icon">🏢</span><div><div class="industry-name">Facilities</div><div class="industry-desc">Condition assessments and AMC records</div></div></a>
+    <a href="/field-reporting-app/" class="industry-card"><span class="industry-icon">🛡</span><div><div class="industry-name">Insurance</div><div class="industry-desc">Loss adjustment and claims inspection</div></div></a>
+  </div>
+</section>
+
+<!-- Pilot CTA -->
+<div class="pilot-cta">
+  <div class="pilot-cta-text">
+    <h2>Join the CapturePort pilot</h2>
+    <p>Free access for marine, inspection, MEP, and field service teams. Your feedback shapes what we build next.</p>
+  </div>
+  <a href="/pilot" class="btn-yellow">Request pilot access →</a>
+</div>
+
+<!-- Guides -->
+<section style="margin-bottom:2.5rem">
+  <p class="section-label">Free guides</p>
+  <p class="section-title">Written for field reporting professionals</p>
+  <div class="guides-list">
+    <a href="/guides/how-to-write-vessel-inspection-report/" class="guide-link">Vessel inspection report<span>Structure, photo evidence, scope statements</span></a>
+    <a href="/guides/how-to-write-vessel-attendance-report/" class="guide-link">Vessel attendance report<span>Marine service and repair visit format</span></a>
+    <a href="/guides/how-to-write-marine-service-report/" class="guide-link">Marine service report<span>Scope, work done, part numbers, countersignature</span></a>
+    <a href="/guides/how-to-write-site-inspection-report/" class="guide-link">Site inspection report<span>Construction and civil inspection format</span></a>
+    <a href="/guides/how-to-write-mep-inspection-report/" class="guide-link">MEP inspection report<span>HVAC, electrical, and plumbing inspection</span></a>
+    <a href="/guides/how-to-write-equipment-inspection-report/" class="guide-link">Equipment inspection report<span>Condition rating, defect lists, recommendations</span></a>
+    <a href="/guides/how-to-write-property-snagging-report/" class="guide-link">Property snagging report<span>Room-by-room defect documentation</span></a>
+    <a href="/guides/how-to-write-insurance-inspection-report/" class="guide-link">Insurance inspection report<span>Fact vs opinion, evidence standards, causation</span></a>
+  </div>
+</section>
+
+</div>
+</main>
+<footer class="site-footer">
+<div class="container footer-links">
+<a href="/download">Download</a><a href="/field-reporting-app/">Field Reporting</a><a href="/marine-reporting-app/">Marine</a><a href="/inspection-report-app/">Inspection</a><a href="/pilot">Pilot</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+</div>
+<p class="container footer-copy">© 2026 CapturePort. All rights reserved.</p>
+</footer>
 </body>
 </html>
