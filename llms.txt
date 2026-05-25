@@ -53,3 +53,9 @@ Additional guides:
 - https://captureport.app/guides/how-to-write-equipment-inspection-report/
 
 Pilot program: https://captureport.app/pilot
+
+Additional guides (May 2026):
+- https://captureport.app/guides/how-to-write-fire-safety-inspection-report/
+- https://captureport.app/guides/how-to-write-facilities-condition-survey/
+- https://captureport.app/guides/how-to-write-offshore-inspection-report/
+- https://captureport.app/guides/how-to-write-dry-dock-inspection-report/
