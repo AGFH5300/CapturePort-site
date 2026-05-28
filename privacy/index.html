@@ -79,7 +79,7 @@
     <div class="legal-body">
 
       <div class="summary-box">
-        <p><strong>Plain English:</strong> CapturePort requires an account (email address) to use the app. Your projects, photos, voice notes, and reports are stored securely in the cloud so you can access them across devices. We use Sentry to monitor app stability — it collects crash logs and a device identifier. We do not sell your data, use it for advertising, or share it with anyone except the services listed in this policy.</p>
+        <p><strong>Plain English:</strong> CapturePort is currently in an early pilot stage and is local-first. In the current MVP, core reporting data is stored on your device. Cloud sync and account-based multi-device access are not generally available. We may use diagnostics such as crash reporting for app stability. We do not sell your data, use it for advertising, or share it beyond the services listed in this policy.</p>
         <p>You can request deletion of your data or your full account at any time — see Section 9.</p>
       </div>
 
@@ -138,10 +138,10 @@
 
       <div class="policy-section" id="s3">
         <h2><span class="sec-num">3</span> How data is stored</h2>
-        <p>CapturePort uses a <strong>local-first, cloud-synced</strong> architecture:</p>
+        <p>CapturePort is currently in an early pilot stage and uses a <strong>local-first architecture</strong>:</p>
         <ul>
           <li><strong>On your device</strong> — all data is stored locally using SQLite and local file storage. The app is fully functional offline.</li>
-          <li><strong>In the cloud</strong> — when connected, your data is synced to Supabase, a secure cloud database hosted on AWS infrastructure. Data is encrypted in transit (TLS) and at rest.</li>
+          <li><strong>Cloud sync status</strong> — full production cloud sync is not generally available in the current MVP. If optional pilot sync is introduced for selected testers, it will be communicated separately.</li>
         </ul>
         <div class="warn-box">
           <p>Your local device security also matters. We recommend keeping your device secured with a screen lock, particularly if your reports contain sensitive commercial or technical information.</p>
@@ -151,10 +151,10 @@
       <div class="policy-section" id="s4">
         <h2><span class="sec-num">4</span> How we use your data</h2>
         <ul>
-          <li><strong>Account data</strong> — to authenticate you, manage your account, and associate your reports with your account across devices.</li>
+          <li><strong>Contact data you submit</strong> — to respond to pilot applications, support requests, privacy requests, and account/data deletion requests.</li>
           <li><strong>Report and project data</strong> — to power the app's core features: capturing, organising, and generating inspection reports.</li>
           <li><strong>App performance data</strong> — to monitor app stability, diagnose crashes, and improve performance.</li>
-          <li><strong>Email address</strong> — to send you your login OTP and, where you have opted in, important service notifications (no marketing emails without your consent).</li>
+          <li><strong>Email address</strong> — to reply to your support or pilot request. No marketing emails without your consent.</li>
         </ul>
         <p>We do not use your report content, photos, or project data for any purpose beyond providing the service to you.</p>
       </div>
@@ -184,11 +184,11 @@
 
       <div class="policy-section" id="s7">
         <h2><span class="sec-num">7</span> Third-party services</h2>
-        <p>CapturePort uses the following third-party services. No other parties receive your data.</p>
+        <p>CapturePort may use the following third-party services. Use depends on the pilot build you are using.</p>
 
         <div class="third-party-card">
-          <h3>Supabase — Authentication &amp; Cloud Storage</h3>
-          <p>Stores your account (email, name) and syncs your project data, reports, and media to a secure cloud database. Infrastructure hosted on AWS. Data is encrypted in transit and at rest. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy →</a></p>
+          <h3>Supabase — Planned / Limited Pilot Infrastructure</h3>
+          <p>Cloud authentication/sync is not generally available in the current MVP. If enabled for a limited pilot group, related processing will be limited to that pilot scope and communicated to participants. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy →</a></p>
         </div>
 
         <div class="third-party-card">
@@ -197,7 +197,7 @@
         </div>
 
         <div class="third-party-card">
-          <h3>Google Play / Apple App Store — App Distribution</h3>
+          <h3>Google Play Testing / App Distribution Status</h3>
           <p>Standard platform-level telemetry from Google (Android) and Apple (iOS) may apply as part of the operating system and app store. This is governed by Google's and Apple's own privacy policies respectively.</p>
         </div>
       </div>
@@ -206,9 +206,9 @@
         <h2><span class="sec-num">8</span> Data security</h2>
         <p>We take reasonable measures to protect your data:</p>
         <ul>
-          <li>All data transmitted between the app and our servers is encrypted in transit using TLS.</li>
-          <li>Data stored in Supabase is encrypted at rest.</li>
-          <li>Authentication uses one-time passwords (OTP) sent to your registered email — no passwords are stored.</li>
+          <li>Where network features are used, data transmitted between the app and our services is encrypted in transit using TLS.</li>
+          <li>Data you keep only on your device remains under your device security controls.</li>
+          <li>Current MVP use may not require authentication for local-only use.</li>
           <li>Access to your account data is restricted to you and authorised CapturePort personnel only.</li>
         </ul>
         <p>No method of transmission or storage is 100% secure. If you become aware of any security concern related to your account, please contact us immediately at <strong>support@captureport.app</strong>.</p>
@@ -216,12 +216,12 @@
 
       <div class="policy-section" id="s9">
         <h2><span class="sec-num">9</span> Data retention and deletion</h2>
-        <p>Your data is retained for as long as your account is active. You have the following rights:</p>
+        <p>In the current MVP, most user data is stored locally on your device. You have the following rights:</p>
         <ul>
           <li><strong>Delete specific data</strong> — request deletion of individual projects, reports, photos, or your company branding without closing your account. <a href="/delete-data/">Submit a data deletion request →</a></li>
           <li><strong>Delete your account</strong> — request permanent deletion of your account and all associated data. We will complete this within 30 days of your confirmed request. <a href="/delete-account/">Submit an account deletion request →</a></li>
         </ul>
-        <p><strong>What is retained after account deletion:</strong> Billing and transaction records are retained for 7 years as required by law. Anonymised, aggregated usage analytics (not linked to your identity) may be retained indefinitely. Crash logs held by Sentry are governed by Sentry's own retention policy.</p>
+        <p><strong>Pilot data note:</strong> Because data may be local-only in the current MVP, you are responsible for exporting and backing up important reports. CapturePort cannot recover reports lost due to device loss, reset, or uninstall unless cloud backup has been explicitly enabled for your pilot cohort.</p>
         <p>To request deletion, email <strong>support@captureport.app</strong> from your registered address. We respond within 2 business days.</p>
       </div>
 

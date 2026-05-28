@@ -72,7 +72,7 @@
   <div class="pilot-hero">
     <div class="pilot-tag">Early access</div>
     <h1>Join the CapturePort Pilot</h1>
-    <p>Free access for field teams who want to replace slow, manual reporting with a faster, cleaner mobile workflow. Your feedback directly shapes what we build next.</p>
+    <p>CapturePort is in an early pilot stage. If your team wants to test a local-first, mobile reporting workflow and share feedback, apply for pilot access.</p>
   </div>
 
   <div class="pilot-layout">
@@ -81,9 +81,10 @@
     <div>
       <div class="pilot-form" id="pilot-form-wrap">
         <p class="form-title">Request pilot access</p>
-        <p class="form-sub">Takes 60 seconds. We'll be in touch within 1 business day.</p>
+        <p class="form-sub">Takes about 60 seconds. Required fields are name, work email, and use case summary.</p>
 
         <form id="pilot-form" novalidate>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
           <div class="field-group">
             <div class="field">
               <label for="f-name">Full name *</label>
@@ -142,19 +143,19 @@
               </select>
             </div>
             <div class="field">
-              <label for="f-pain">What is your biggest reporting pain point? (optional)</label>
-              <textarea id="f-pain" name="pain_point" placeholder="e.g. Writing reports from memory after leaving the vessel, organising 50+ photos..."></textarea>
+              <label for="f-pain">What is your current reporting workflow and pain point? *</label>
+              <textarea id="f-pain" name="pain_point" placeholder="e.g. writing reports from memory after site visits" required></textarea>
             </div>
           </div>
 
           <button type="submit" class="submit-btn" id="submit-btn">Request pilot access →</button>
-          <p class="form-note">Free access during the pilot. No credit card. No account required to use the app.</p>
+          <p class="form-note">Pilot access is reviewed manually. This form does not submit automatically; it opens your email app with a prefilled request to support@captureport.app, and you must press send.</p>
         </form>
 
         <div class="success-state" id="success-state">
           <div class="success-icon">✅</div>
-          <p class="success-title">Request received — thank you.</p>
-          <p class="success-body">We will be in touch within 1 business day with your pilot access details.<br><br>In the meantime, <a href="/download" style="color:#0D2C6B;font-weight:600">download CapturePort</a> and start using it — no account needed.</p>
+          <p class="success-title">Next step: send the email draft.</p>
+          <p class="success-body">Your email app should open with a prefilled pilot request to support@captureport.app. Send that email to complete your request. If no email window appears, contact <a href="mailto:support@captureport.app" style="color:#0D2C6B;font-weight:600">support@captureport.app</a> directly.</p>
         </div>
       </div>
     </div>
@@ -165,7 +166,7 @@
         <div class="benefit-icon">📱</div>
         <div class="benefit-body">
           <h3>Free full access during the pilot</h3>
-          <p>All features unlocked at no cost. Export unlimited reports during the pilot period.</p>
+          <p>Pilot testers get access to the current MVP capabilities: field capture, photos, notes, local storage, and export.</p>
         </div>
       </div>
       <div class="benefit">
@@ -219,14 +220,20 @@
 </footer>
 
 <script>
-document.getElementById('pilot-form').addEventListener('submit', async function(e) {
+const form = document.getElementById('pilot-form');
+const btn = document.getElementById('submit-btn');
+const successState = document.getElementById('success-state');
+
+form.addEventListener('submit', function(e) {
   e.preventDefault();
-  const btn = document.getElementById('submit-btn');
-  const form = e.target;
   const data = Object.fromEntries(new FormData(form));
 
-  if (!data.name || !data.email) {
-    alert('Please enter your name and email to continue.');
+  if (data.website) {
+    alert('Submission blocked. Please retry.');
+    return;
+  }
+  if (!data.name || !data.email || !data.pain_point) {
+    alert('Please complete name, work email, and workflow summary.');
     return;
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
@@ -235,33 +242,24 @@ document.getElementById('pilot-form').addEventListener('submit', async function(
   }
 
   btn.disabled = true;
-  btn.textContent = 'Sending…';
+  btn.textContent = 'Opening email…';
 
-  // Send to Formspree (replace FORM_ID with your Formspree endpoint)
-  // To set up: go to formspree.io, create a free account, create a form,
-  // and replace REPLACE_WITH_FORMSPREE_ID below with your form ID.
-  try {
-    const res = await fetch('https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data),
-    });
-    if (res.ok) {
-      document.getElementById('pilot-form-wrap').querySelector('form').style.display = 'none';
-      document.getElementById('success-state').classList.add('visible');
-    } else {
-      throw new Error('Server error');
-    }
-  } catch {
-    // Fallback: open mailto link so no submission is ever lost
-    const subject = encodeURIComponent('CapturePort Pilot Request');
-    const body = encodeURIComponent(
-      `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company||''}\nRole: ${data.role||''}\nIndustry: ${data.industry||''}\nReports/month: ${data.reports_per_month||''}\nPain point: ${data.pain_point||''}`
-    );
-    window.location.href = `mailto:support@captureport.app?subject=${subject}&body=${body}`;
-    btn.disabled = false;
-    btn.textContent = 'Request pilot access →';
-  }
+  const subject = encodeURIComponent('CapturePort Pilot Request');
+  const body = encodeURIComponent(
+    `Name: ${data.name}
+Email: ${data.email}
+Company: ${data.company||''}
+Role: ${data.role||''}
+Industry: ${data.industry||''}
+Reports/month: ${data.reports_per_month||''}
+Workflow and pain point: ${data.pain_point||''}`
+  );
+
+  window.location.href = `mailto:support@captureport.app?subject=${subject}&body=${body}`;
+  form.style.display = 'none';
+  successState.classList.add('visible');
+  btn.disabled = false;
+  btn.textContent = 'Request pilot access →';
 });
 </script>
 </body>
