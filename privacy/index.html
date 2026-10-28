@@ -73,13 +73,13 @@
     <div class="legal-hero">
       <div class="legal-tag">Legal</div>
       <h1>Privacy Policy</h1>
-      <p class="legal-meta">Effective: 24 May 2026 &nbsp;·&nbsp; Last updated: 24 May 2026 &nbsp;·&nbsp; captureport.app</p>
+      <p class="legal-meta">Effective: 28 October 2026 &nbsp;·&nbsp; Last updated: 28 October 2026 &nbsp;·&nbsp; captureport.app</p>
     </div>
 
     <div class="legal-body">
 
       <div class="summary-box">
-        <p><strong>Plain English:</strong> CapturePort is currently in an early pilot stage and is local-first. In the current MVP, core reporting data is stored on your device. Cloud sync and account-based multi-device access are not generally available. We may use diagnostics such as crash reporting for app stability. We do not sell your data, use it for advertising, or share it beyond the services listed in this policy.</p>
+        <p><strong>Plain English:</strong> CapturePort is offline-first. Most reports, photographs, voice notes and projects are kept on your phone; email OTP registration and security checks use an online authentication service. Online account creation does not automatically back up your reports. Optional GPS capture can record a location when enabled. Diagnostics and crash reporting depend on the build in use. We do not sell your data for advertising.</p>
         <p>You can request deletion of your data or your full account at any time — see Section 9.</p>
       </div>
 
@@ -125,15 +125,15 @@
           <li><strong>Report drafts and exports</strong> — generated report files (PDF, Word) created from your captured data.</li>
           <li><strong>Company branding</strong> — your uploaded company logo or letterhead, if provided.</li>
         </ul>
-        <p>All report and project data is stored locally on your device while offline and synced to your secure cloud account when a connection is available.</p>
+        <p>Core reporting data is normally stored locally on your device. The current public pilot does not generally provide cloud backup or synchronization of those local records. Email authentication and relevant account/security information are processed online. Where an optional pilot sync feature is enabled, participants should receive separate notice of that processing.</p>
 
         <p><strong>App performance data</strong></p>
         <ul>
-          <li><strong>Crash logs</strong> — automatically collected when the app crashes, to help us diagnose and fix issues.</li>
-          <li><strong>Diagnostics</strong> — app performance metrics collected automatically.</li>
-          <li><strong>Device identifier</strong> — a device-level identifier used by our crash reporting system to group and analyse crash events.</li>
+          <li><strong>Crash logs</strong> — may be collected in builds that have crash reporting enabled, to help us diagnose faults.</li>
+          <li><strong>Diagnostics</strong> — performance information may be collected when diagnostics are enabled in the installed build.</li>
+          <li><strong>Device or installation information</strong> — limited app-installation or device information may be processed for account security, anti-abuse, and optional diagnostics; this does not mean we collect your device MAC address or IMEI.</li>
         </ul>
-        <p>Performance data is collected automatically and sent to Sentry (see Section 7). It does not include the content of your reports or captures.</p>
+        <p>Where enabled, crash reporting may send diagnostics to Sentry (see Section 7). We do not intentionally send report photographs, recordings, or report content for crash analysis.</p>
       </div>
 
       <div class="policy-section" id="s3">
@@ -165,7 +165,7 @@
           <li>We do <strong>not</strong> sell, rent, or share your personal data or report content with third parties for commercial purposes.</li>
           <li>We do <strong>not</strong> use your data for advertising or marketing targeting.</li>
           <li>We do <strong>not</strong> use your report content, photos, or captured data to train AI or machine learning models.</li>
-          <li>We do <strong>not</strong> track your location.</li>
+          <li>We do <strong>not</strong> use location information for advertising or continuous background tracking. If you enable optional GPS capture, a location may be stored against a photograph or project and included in an export only when selected.</li>
           <li>We do <strong>not</strong> use your private reports as examples, templates, or public content.</li>
           <li>We do <strong>not</strong> share your data with any third party other than the services explicitly listed in Section 7.</li>
         </ul>
@@ -177,7 +177,9 @@
         <ul>
           <li><strong>Camera</strong> — used only when you actively take a photo within the app.</li>
           <li><strong>Microphone</strong> — used only when you actively start a voice note recording.</li>
-          <li><strong>Photo library</strong> — used only when you choose to import a photo from your device gallery.</li>
+          <li><strong>Photo library</strong> — used for photo import and, when enabled, saving project photos to the Gallery.</li>
+          <li><strong>Location</strong> — optional location information may be recorded with project photographs when permitted and selected. You can choose whether to show available GPS metadata on a report.</li>
+          <li><strong>Biometrics</strong> — optional device-supported quick unlock may be enabled; the device authentication system performs the biometric match.</li>
         </ul>
         <p>Permissions are requested at the point they are needed, not on app launch. You can revoke any permission at any time in your device Settings. This will prevent the related feature from working but will not affect data already stored in the app.</p>
       </div>
@@ -187,13 +189,13 @@
         <p>CapturePort may use the following third-party services. Use depends on the pilot build you are using.</p>
 
         <div class="third-party-card">
-          <h3>Supabase — Planned / Limited Pilot Infrastructure</h3>
-          <p>Cloud authentication/sync is not generally available in the current MVP. If enabled for a limited pilot group, related processing will be limited to that pilot scope and communicated to participants. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy →</a></p>
+          <h3>Supabase — Account Authentication / Pilot Infrastructure</h3>
+          <p>Email OTP account authentication is available in current app builds. Supabase may process email addresses, login/verification records and related security information. This does not mean full report cloud sync is available. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy →</a></p>
         </div>
 
         <div class="third-party-card">
           <h3>Sentry — Crash Reporting &amp; Diagnostics</h3>
-          <p>Automatically collects crash logs, diagnostic data, and a device identifier when the app experiences an error. This data does not include your report content or personal information beyond the device identifier. Used solely to diagnose and fix app issues. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy Policy →</a></p>
+          <p>If Sentry is enabled in the installed release, it may process crash and diagnostic records and relevant app/device identifiers to troubleshoot faults. Report content is not intentionally included. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy Policy →</a></p>
         </div>
 
         <div class="third-party-card">
@@ -216,12 +218,12 @@
 
       <div class="policy-section" id="s9">
         <h2><span class="sec-num">9</span> Data retention and deletion</h2>
-        <p>In the current MVP, most user data is stored locally on your device. You have the following rights:</p>
+        <p>In the current MVP, most reporting data is stored locally on your device, while your account identity is handled online. You have the following options:</p>
         <ul>
           <li><strong>Delete specific data</strong> — request deletion of individual projects, reports, photos, or your company branding without closing your account. <a href="/delete-data/">Submit a data deletion request →</a></li>
-          <li><strong>Delete your account</strong> — request permanent deletion of your account and all associated data. We will complete this within 30 days of your confirmed request. <a href="/delete-account/">Submit an account deletion request →</a></li>
+          <li><strong>Delete your account</strong> — request permanent deletion of your account and all associated data. We aim to process verified deletion requests within 30 days, subject to any legally required limited retention. <a href="/delete-account/">Submit an account deletion request →</a></li>
         </ul>
-        <p><strong>Pilot data note:</strong> Because data may be local-only in the current MVP, you are responsible for exporting and backing up important reports. CapturePort cannot recover reports lost due to device loss, reset, or uninstall unless cloud backup has been explicitly enabled for your pilot cohort.</p>
+        <p><strong>Pilot data note:</strong> Account deletion removes associated online account records, but cannot remotely erase reports held only on your phone, files already exported to other apps, or third-party copies. Local app data can be managed through the app and your device settings. You are responsible for exporting and backing up important reports; signing in does not by itself activate cloud backup.</p>
         <p>To request deletion, email <strong>support@captureport.app</strong> from your registered address. We respond within 2 business days.</p>
       </div>
 
