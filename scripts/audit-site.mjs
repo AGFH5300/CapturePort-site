@@ -21,6 +21,11 @@ const errors=[],warnings=[];
 const titles=new Map(),canons=new Map();
 for(const path of pages){
   const source=read(path);
+  // Every published page must show the same official CapturePort logo as the header/app manifest.
+  const faviconLinks=[...source.matchAll(/<link\b[^>]*rel="icon"[^>]*>/gi)].map(x=>x[0]);
+  if(faviconLinks.length!==1 || !faviconLinks[0].includes('/assets/captureport-icon.png?v=20261109')) {
+    errors.push(`${path}: missing, stale or duplicated CapturePort logo favicon`);
+  }
   const route=path==="index.html"?"/":"/"+path.replace(/\/index\.html$/,"")+"/";
   const expectedCanon=SITE+route;
   const title=get(source,/<title[^>]*>([^<]+)<\/title>/i);
