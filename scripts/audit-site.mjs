@@ -17,13 +17,18 @@ function get(source,re){return source.match(re)?.[1]||null}
 const pages=htmlFiles().sort();
 const siteRoutes=new Set(pages.map(p=>p==="index.html"?"/":"/"+p.replace(/\/index\.html$/,"")+"/"));
 const sitemap=read("sitemap.xml");
+const logoFavicon=readFileSync("assets/captureport-favicon.png");
+assert.equal(logoFavicon.toString("hex",1,4),"504e47","Original CapturePort favicon is not a PNG");
+assert.equal(logoFavicon.readUInt32BE(16),256,"Expected original 256px CapturePort favicon width");
+assert.equal(logoFavicon.readUInt32BE(20),256,"Expected original 256px CapturePort favicon height");
 const errors=[],warnings=[];
 const titles=new Map(),canons=new Map();
 for(const path of pages){
   const source=read(path);
-  // Every published page must show the same official CapturePort logo as the header/app manifest.
+  // Use the original CapturePort logo favicon from the existing project assets,
+  // with its original artwork, proportions and balanced white margins unchanged.
   const faviconLinks=[...source.matchAll(/<link\b[^>]*rel="icon"[^>]*>/gi)].map(x=>x[0]);
-  if(faviconLinks.length!==1 || !faviconLinks[0].includes('/assets/captureport-icon.png?v=20261109')) {
+  if(faviconLinks.length!==1 || !faviconLinks[0].includes('/assets/captureport-favicon.png?v=20261109-original')) {
     errors.push(`${path}: missing, stale or duplicated CapturePort logo favicon`);
   }
   const route=path==="index.html"?"/":"/"+path.replace(/\/index\.html$/,"")+"/";
