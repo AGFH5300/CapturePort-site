@@ -148,14 +148,16 @@
             </div>
           </div>
 
+          <label style="display:flex;align-items:flex-start;gap:10px;font-size:.82rem;line-height:1.5;color:#374151;margin-bottom:16px"><input type="checkbox" name="agreed_to_contact" id="f-agree" required style="margin-top:4px;flex:0 0 auto"><span>I agree that CapturePort can store the information in this form and contact me about my pilot request. See the <a href="/privacy/" style="color:#0D2C6B">Privacy Policy</a>.</span></label>
           <button type="submit" class="submit-btn" id="submit-btn">Request pilot access →</button>
-          <p class="form-note">Pilot access is reviewed manually. This form does not submit automatically; it opens your email app with a prefilled request to support@captureport.app, and you must press send.</p>
+          <p class="form-note">Pilot requests are submitted securely to CapturePort and reviewed manually. You do not need to open an email application.</p>
+          <p id="form-error" role="alert" style="display:none;color:#b42318;font-size:.87rem;margin-top:12px"></p>
         </form>
 
         <div class="success-state" id="success-state">
           <div class="success-icon">✅</div>
-          <p class="success-title">Next step: send the email draft.</p>
-          <p class="success-body">Your email app should open with a prefilled pilot request to support@captureport.app. Send that email to complete your request. If no email window appears, contact <a href="mailto:support@captureport.app" style="color:#0D2C6B;font-weight:600">support@captureport.app</a> directly.</p>
+          <p class="success-title">Your pilot request was received.</p>
+          <p class="success-body">Thank you. The CapturePort team can review your request and contact you about early access. For enquiries, email <a href="mailto:support@captureport.app" style="color:#0D2C6B;font-weight:600">support@captureport.app</a>.</p>
         </div>
       </div>
     </div>
@@ -222,44 +224,53 @@
 <script>
 const form = document.getElementById('pilot-form');
 const btn = document.getElementById('submit-btn');
+const errorElement = document.getElementById('form-error');
 const successState = document.getElementById('success-state');
+const endpoint = 'https://mxdibxggmfdfdgcrzbqy.supabase.co/functions/v1/captureport-pilot-lead';
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
+form.addEventListener('submit', async function(event) {
+  event.preventDefault();
+  errorElement.style.display = 'none';
+  errorElement.textContent = '';
   const data = Object.fromEntries(new FormData(form));
-
-  if (data.website) {
-    alert('Submission blocked. Please retry.');
+  if (data.website) return;
+  if (!data.name || !data.email || !data.pain_point || String(data.pain_point).trim().length < 10) {
+    errorElement.textContent = 'Please complete your name, work email and a short workflow summary (10 characters or more).';
+    errorElement.style.display = 'block';
     return;
   }
-  if (!data.name || !data.email || !data.pain_point) {
-    alert('Please complete name, work email, and workflow summary.');
+  if (!/^[^ @]+@[^ @]+[.][^ @]+$/.test(String(data.email))) {
+    errorElement.textContent = 'Please enter a valid work email address.';
+    errorElement.style.display = 'block';
     return;
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    alert('Please enter a valid email address.');
+  if (!data.agreed_to_contact) {
+    errorElement.textContent = 'Please confirm that we can use your details to respond to your pilot request.';
+    errorElement.style.display = 'block';
     return;
   }
-
   btn.disabled = true;
-  btn.textContent = 'Opening email…';
-
-  const subject = encodeURIComponent('CapturePort Pilot Request');
-  const body = encodeURIComponent(
-    `Name: ${data.name}
-Email: ${data.email}
-Company: ${data.company||''}
-Role: ${data.role||''}
-Industry: ${data.industry||''}
-Reports/month: ${data.reports_per_month||''}
-Workflow and pain point: ${data.pain_point||''}`
-  );
-
-  window.location.href = `mailto:support@captureport.app?subject=${subject}&body=${body}`;
-  form.style.display = 'none';
-  successState.classList.add('visible');
-  btn.disabled = false;
-  btn.textContent = 'Request pilot access →';
+  btn.textContent = 'Submitting request…';
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, agreed_to_contact: true }),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) {
+      throw new Error(typeof result.error === 'string' ? result.error : 'Unable to submit your request.');
+    }
+    form.style.display = 'none';
+    successState.classList.add('visible');
+    if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: 'captureport_pilot_submitted' });
+  } catch (error) {
+    errorElement.textContent = 'Your request was not confirmed: ' + (error.message || 'please retry') + '. You can also email support@captureport.app.';
+    errorElement.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Request pilot access →';
+  }
 });
 </script>
 </body>

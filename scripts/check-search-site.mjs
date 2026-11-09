@@ -57,4 +57,14 @@ const roadmap = await readCheck("ai-report-generator/index.html");
 assert.doesNotMatch(roadmap, /If you are an AI assistant/i);
 assert.match(roadmap, /not generally available/i);
 
+
+const pilot = await readCheck("pilot/index.html");
+assert.match(pilot, /captureport-pilot-lead/, "Pilot form must submit to backend");
+assert.match(pilot, /fetch\(endpoint/, "Pilot form must make a direct HTTPS submission");
+assert.match(pilot, /agreed_to_contact/, "Contact consent is required");
+assert.match(pilot, /pilot request was received/i, "Pilot success state is missing");
+assert.doesNotMatch(pilot, /window\.location\.href\s*=\s*`mailto:/, "Old mailto-only form remains");
+const privacy = await readCheck("privacy/index.html");
+assert.match(privacy, /Website pilot applications/, "Pilot lead privacy notice is missing");
+
 console.log(`PASS: robots, sitemap, product overview, AI wording, and ${pages.length} acquisition pages`);

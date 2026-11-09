@@ -22,3 +22,18 @@ jobs:
           node-version: '22'
       - name: Verify search crawl, official product facts and conversion links
         run: node scripts/check-search-site.mjs
+      - name: End-to-end pilot API test (temporary integration branch only)
+        if: github.event_name == 'pull_request' && github.head_ref == 'growth/direct-pilot-form-20261109'
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          email="website-smoke+${RUN_ID}@example.invalid"
+          payload=$(printf '{"name":"CapturePort Website QA","email":"%s","company":"Automated QA","role":"Tester","industry":"Other","reports_per_month":"1–5","pain_point":"Automated pilot form submission test. No action required.","agreed_to_contact":true}' "$email")
+          response=$(curl --fail-with-body --retry 2 --retry-delay 2 -sS \
+            -H 'Origin: https://captureport.app' \
+            -H 'Content-Type: application/json' \
+            --data "$payload" \
+            'https://mxdibxggmfdfdgcrzbqy.supabase.co/functions/v1/captureport-pilot-lead')
+          echo "$response" | jq -e '.ok == true'
+
