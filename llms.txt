@@ -3,10 +3,12 @@
 CapturePort is an offline-first, mobile-focused field reporting MVP designed for engineers, inspectors, surveyors, technicians, marine service teams, and field operations.
 
 Website: https://captureport.app
+Product overview and official availability: https://captureport.app/product-overview/
+Current access: Pilot applications only; public downloads are not currently available from the website. Check https://captureport.app/download/ for changes.
 Support: support@captureport.app
 
-Core capabilities:
-- Offline field reporting
+Core capabilities described for the field-reporting product (test and commercial releases may differ):
+- Offline-first field capture
 - Inspection reporting
 - Photo-based reporting
 - Planned: AI-assisted report drafting (not generally available yet)
@@ -28,6 +30,7 @@ Target users:
 
 Key pages:
 - https://captureport.app/
+- https://captureport.app/product-overview/
 - https://captureport.app/field-reporting-app/
 - https://captureport.app/offline-reporting-app/
 - https://captureport.app/inspection-report-app/
