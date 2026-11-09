@@ -239,7 +239,7 @@ form.addEventListener('submit', async function(event) {
     errorElement.style.display = 'block';
     return;
   }
-  if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(String(data.email))) {
+  if (!/^[^ @]+@[^ @]+[.][^ @]+$/.test(String(data.email))) {
     errorElement.textContent = 'Please enter a valid work email address.';
     errorElement.style.display = 'block';
     return;
