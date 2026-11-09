@@ -22,6 +22,8 @@ jobs:
           node-version: '22'
       - name: Verify search crawl, official product facts and conversion links
         run: node scripts/check-search-site.mjs
+      - name: Independently audit all published HTML pages
+        run: node scripts/audit-site.mjs
       - name: End-to-end pilot API test (temporary integration branch only)
         if: github.event_name == 'pull_request' && github.head_ref == 'growth/direct-pilot-form-20261109'
         env:
