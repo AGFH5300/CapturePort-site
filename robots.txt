@@ -1,4 +1,21 @@
+# Public product and service pages are available for search indexing.
 User-agent: *
+Allow: /
+
+# Search and user-directed assistant retrieval (not training-specific directives).
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://captureport.app/sitemap.xml
